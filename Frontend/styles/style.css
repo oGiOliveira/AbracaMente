@@ -1,3 +1,14 @@
+@charset "UTF-8"; 
+
+:root {
+  --cor0: rgb(255, 255, 255);
+  --cor1: black;
+  --cor2: #006dff;
+  --cor3: #004aad;
+  --cor4: #063b82;
+
+}
+
 /* Reset básico para margens e preenchimentos */
 * {
   margin: 0;

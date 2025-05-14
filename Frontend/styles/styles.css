@@ -1,49 +1,64 @@
 @charset "UTF-8"; 
 
-:root {
-  --cor0: rgb(255, 255, 255);
-  --cor1: black;
-  --cor2: #006dff;
-  --cor3: #004aad;
-  --cor4: #063b82;
+/* Lembrando que a Tipografia "ITC MOTTER CORPUS" são para textos grandes, titulos e etc.
+A tipografia " Coustard " é para texto corrido.
 
+Se vocês acharem que vão precisar de mais uma intermediária para 
+textos destaques eu sugiro usar o " Montserrat " mas podemos acertar isso depois. */
+
+
+
+/* ==================== */
+/* Variáveis globais    */
+/* ==================== */
+:root {
+  --cor0: rgb(255, 255, 255); /* Cor de fundo clara */
+  --cor1: black;              /* Texto padrão escuro */
+  --cor2: #006dff;            /* Azul vibrante */
+  --cor3: #004aad;            /* Azul intermediário */
+  --cor4: #063b82;            /* Azul escuro */
+  --cor5: #ccc;
 }
 
-/* Reset básico para margens e preenchimentos */
+/* Reset básico para todos os elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo geral do corpo da página */
+/* ========================= */
+/* Estilo global do <body>  */
+/* ========================= */
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background-color: #ffffff;
+  background-color: var(--cor0);
   color: #333;
 }
 
-/* Container centralizado com largura máxima */
+/* Container para centralizar e limitar o conteúdo */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: auto;
 }
 
-/* Estilização do cabeçalho */
+/* ==================== */
+/* Header do site       */
+/* ==================== */
 header {
   background-color: #f5f5f5;
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 }
 
-/* Título principal no cabeçalho */
+/* Título do site no cabeçalho */
 header h1 {
   text-align: center;
   color: #5a8ea2;
 }
 
-/* Lista de navegação com alinhamento central e responsivo */
+/* Menu de navegação centralizado */
 nav ul {
   list-style: none;
   display: flex;
@@ -52,19 +67,20 @@ nav ul {
   flex-wrap: wrap;
 }
 
-/* Itens do menu de navegação */
 nav ul li {
   margin: 10px 15px;
 }
 
-/* Links de navegação */
+/* Estilo dos links do menu */
 nav ul li a {
   text-decoration: none;
   color: #5a8ea2;
   font-weight: bold;
 }
 
-/* Seção de destaque (hero) com fundo e centralização de texto */
+/* ==================== */
+/* Seção Hero (destaque)*/
+/* ==================== */
 .hero {
   background-color: #e4f1f6;
   padding: 80px 0;
@@ -72,39 +88,40 @@ nav ul li a {
   color: #2a4d59;
 }
 
-/* Título na seção hero */
 .hero h2 {
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-/* Parágrafo na seção hero */
 .hero p {
   font-size: 1.2em;
 }
 
-/* Espaçamento geral do conteúdo principal */
+/* ==================== */
+/* Main: conteúdo geral */
+/* ==================== */
 main {
   padding: 40px 0;
 }
 
-/* Margem inferior entre seções */
 section {
   margin-bottom: 40px;
 }
 
-/* Títulos de seções internas */
+/* Títulos internos das seções */
 h2 {
   color: #5a8ea2;
   margin-bottom: 10px;
 }
 
-/* Espaço entre perguntas na FAQ */
+/* ==================== */
+/* Seção FAQ            */
+/* ==================== */
 .faq-item {
   margin-bottom: 10px;
 }
 
-/* Botões da FAQ com estilo personalizado */
+/* Botões da FAQ com estilo limpo */
 .faq-item button {
   background-color: #f0f8fa;
   border: 1px solid #ccc;
@@ -116,7 +133,7 @@ h2 {
   color: #333;
 }
 
-/* Respostas inicialmente ocultas */
+/* Resposta da FAQ escondida por padrão */
 .faq-item .resposta {
   display: none;
   padding: 10px;
@@ -124,13 +141,14 @@ h2 {
   border-left: 4px solid #5a8ea2;
 }
 
-/* Formulário com layout vertical */
+/* ==================== */
+/* Formulário de contato*/
+/* ==================== */
 form {
   display: flex;
   flex-direction: column;
 }
 
-/* Rótulos dos campos do formulário */
 form label {
   margin-top: 10px;
 }
@@ -143,7 +161,7 @@ form input, form textarea {
   border-radius: 4px;
 }
 
-/* Botão de envio do formulário */
+/* Botão do formulário */
 form button {
   margin-top: 15px;
   padding: 10px;
@@ -153,7 +171,9 @@ form button {
   cursor: pointer;
 }
 
-/* Rodapé com cor neutra e texto centralizado */
+/* ==================== */
+/* Footer do site       */
+/* ==================== */
 footer {
   background-color: #f5f5f5;
   padding: 20px 0;

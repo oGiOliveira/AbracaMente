@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'itc';
+  src: url('itc-motter-corpus/MotterCorpusStd-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================= */
+/*       VARIÁVEIS GLOBAIS       */
+/* ============================= */
+:root {
+  --cor0: #ffffff;
+  --cor1: #000000;
+  --cor2: #006dff;
+  --cor3: #004aad;
+  --cor4: #063b82;
+  --cor5: #ccc;  
+  --cor6: #e4f1f6;   
+  --cor7: #333;   
+  --cor8: #5a8ea2;
+
+  --font-padrao: "Coustard", serif;
+  --font-destaque: "Montserrat", sans-serif;
+  --font-titulo: 'itc';
+}
+
+/* ============================= */
+/*         RESET BÁSICO         */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/*         BODY GLOBAL           */
+/* ============================= */
+body {
+  font-family: var(--font-padrao);
+  background-color: var(--cor0);
+  color: var(--cor7);
+  padding: 40px 20px; 
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+
+/* Título principal da página */
+h1 {
+  font-family: var(--font-titulo);
+  font-size: 2.2em;
+  color: var(--cor4);
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/*             MAIN              */
+/* ============================= */
+
+/* Parágrafo explicativo abaixo do título */
+p {
+  font-size: 1.1em;
+  text-indent: 30px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Formulário de agendamento */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--cor6);
+  padding: 20px;
+  border: 1px solid var(--cor5);
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+/* Rótulos dos campos */
+form label {
+  font-family: var(--font-destaque);
+  font-weight: bold;
+  color: var(--cor4);
+}
+
+/* Campos de entrada (nome, data, hora) */
+form input {
+  padding: 10px;
+  border: 1px solid var(--cor5);
+  border-radius: 4px;
+  font-family: var(--font-padrao);
+}
+
+/* Botão de envio do formulário */
+form button {
+  padding: 10px;
+  background-color: var(--cor3);
+  color: var(--cor0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-destaque);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--cor4);
+}
+
+/* ============================= */
+/*            FOOTER             */
+/* ============================= */
+/* (Footer não está presente neste HTML, mas reservado para futuro uso) */
+footer {
+  background-color: var(--cor5);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--cor7);
+}

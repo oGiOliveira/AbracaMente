@@ -2,32 +2,28 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abraçamente - Psicologia</title>
-  <!-- Importa o arquivo CSS externo com estilos -->
   <link rel="stylesheet" href="../styles/styles.css" />
   <link rel="shortcut icon" href="../imagens/cardiogram.png" type="image/x-icon">
 </head>
 <body>
 
-  <!-- Cabeçalho do site com logotipo e navegação principal -->
   <header>
     <div class="container">
       <h1>Abraçamente</h1>
       <nav>
         <ul>
-          <!-- Links âncora para navegação interna da página -->
           <li><a href="#quem-somos">Quem Somos</a></li>
           <li><a href="#duvidas">Dúvidas Frequentes</a></li>
           <li><a href="#contato">Contato</a></li>
-          <!-- Link para a página de Agendamento -->
-          <li><a href="./agendamento.html">Agendamento</a></li>
+          <li><a href="./agendamento.html" class="agendamento-link">Agendamento</a></li>
+		  <li><a href="./login.html" class="agendamento-link">Login</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Seção de destaque inicial com mensagem de boas-vindas -->
   <section class="hero">
     <div class="container">
       <h2>Bem-vindo à Abraçamente</h2>
@@ -35,33 +31,23 @@
     </div>
   </section>
 
-  <!-- Conteúdo principal do site -->
   <main class="container">
-
-    <!-- Seção informativa sobre a clínica -->
     <section id="quem-somos">
       <h2>Quem Somos</h2>
-      <p>
-        A Abraçamente é um espaço dedicado ao cuidado da saúde mental. Nossa missão é oferecer acolhimento, escuta e ferramentas para o bem-estar emocional, através de atendimentos psicológicos éticos e empáticos.
-      </p>
+      <p>A Abraçamente é um espaço dedicado ao cuidado da saúde mental. Nossa missão é oferecer acolhimento, escuta e ferramentas para o bem-estar emocional, através de atendimentos psicológicos éticos e empáticos.</p>
     </section>
 
-    <!-- Seção de perguntas frequentes (FAQ) com botões interativos -->
     <section id="duvidas">
       <h2>Dúvidas Frequentes</h2>
       <div class="faq">
-
-        <!-- Cada item da FAQ possui uma pergunta (botão) e resposta oculta -->
         <div class="faq-item">
           <button onclick="toggleResposta(this)">Como funcionam as sessões?</button>
           <p class="resposta">As sessões têm duração média de 50 minutos e podem ser realizadas presencialmente ou online.</p>
         </div>
-
         <div class="faq-item">
           <button onclick="toggleResposta(this)">Preciso de encaminhamento médico?</button>
           <p class="resposta">Não. Você pode buscar atendimento psicológico diretamente, sem necessidade de encaminhamento.</p>
         </div>
-
         <div class="faq-item">
           <button onclick="toggleResposta(this)">Quanto custa uma sessão?</button>
           <p class="resposta">Os valores variam conforme o profissional e a modalidade (presencial ou online). Consulte para mais informações.</p>
@@ -69,7 +55,6 @@
       </div>
     </section>
 
-    <!-- Formulário de contato com campos básicos -->
     <section id="contato">
       <h2>Contato</h2>
       <form>
@@ -87,14 +72,12 @@
     </section>
   </main>
 
-  <!-- Rodapé com informações de direitos autorais -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Abraçamente - Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- Importa o script JavaScript com funcionalidades -->
   <script src="../scripts/script.js"></script>
 </body>
 </html>

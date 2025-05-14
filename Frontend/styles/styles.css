@@ -1,42 +1,7 @@
 @charset "UTF-8"; 
 
 @import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap');
-/* 
-  USO PARA TEXTOS CORRIDOS
-
-  coustard-regular {
-  font-family: "Coustard", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.coustard-black {
-  font-family: "Coustard", serif;
-  font-weight: 900;
-  font-style: normal;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*
-  USO PARA DESTAQUES
-
-  .montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
-/* USO PARA TÍTULOS */
-@font-face {
-  font-family: 'itc';
-  src: url('itc-motter-corpus/MotterCorpusStd-Regular.ttf') 
-  format(truetype);
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 /* ==================== */
 /* Variáveis globais    */
@@ -51,8 +16,6 @@
   --cor6: #e4f1f6;
   --cor7: #333;
   --cor8: #5a8ea2;
-
-
   --font-padrao: arial, verdana, helvetica, sans-serif;
   --font-titulo: 'itc';
 }
@@ -73,6 +36,8 @@ body {
   font-style: normal;
   background-color: var(--cor0);
   color: var(--cor7);
+  line-height: 1.6; /* Maior espaçamento entre as linhas */
+  padding: 0 20px; /* Adiciona padding nas laterais */
 }
 
 /* Container para centralizar e limitar o conteúdo */
@@ -80,6 +45,7 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: auto;
+  padding: 0 10px; /* Padding adicional */
 }
 
 /* ==================== */
@@ -87,44 +53,43 @@ body {
 /* ==================== */
 header {
   background-color: var(--cor0);
-  padding: 20px 0;
+  padding: 30px 0; /* Aumentei o padding no header */
   border-bottom: 1px solid var(--cor5);
 }
 
 /* Título do site no cabeçalho */
 header h1 {
-  font-family:var(--font-titulo);
+  font-family: var(--font-titulo);
   color: var(--cor4);
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px; /* Mais espaço abaixo do título */
 }
 
 /* Menu de navegação centralizado */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex;
+  justify-content: center; /* Centraliza os itens do menu */
   margin-top: 10px;
   flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 10px 15px;
+  margin: 10px 20px; /* Mais espaçamento entre os itens do menu */
 }
 
-/* Estilo dos links do menu */
 nav ul li a {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
-  font-style: normal;
-  text-decoration: none;
   color: var(--cor3);
-  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.container {
-  display: flex;
-  justify-content: space-between; /* separa h1 e menu */
-  align-items: center;
-  padding: 0 10px;
+
+nav ul li a:hover {
+  color: var(--cor4);
 }
 
 /* ==================== */
@@ -132,18 +97,19 @@ nav ul li a {
 /* ==================== */
 .hero {
   background-color: var(--cor6);
-  padding: 80px 0;
+  padding: 100px 0; /* Aumentei o padding na seção Hero */
   text-align: center;
   color: var(--cor1);
 }
 
 .hero h2 {
   font-size: 2.5em;
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* Aumentei o espaçamento entre o título e o parágrafo */
 }
 
 .hero p {
   font-size: 1.2em;
+  margin-bottom: 20px; /* Mais espaçamento abaixo do parágrafo */
 }
 
 /* ==================== */
@@ -154,38 +120,41 @@ main {
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* Aumentei o espaçamento entre as seções */
 }
 
 /* Títulos internos das seções */
 h2 {
   font-family: 'itc';
   color: var(--cor4);
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* Mais espaço abaixo dos títulos */
 }
 
+/* Parágrafos dentro das seções */
 p {
   text-align: justify;
   text-indent: 30px;
+  margin-bottom: 20px; /* Aumentei o espaçamento entre os parágrafos */
 }
 
 /* ==================== */
 /* Seção FAQ            */
 /* ==================== */
 .faq-item {
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* Aumentei o espaçamento entre os itens da FAQ */
 }
 
 /* Botões da FAQ com estilo limpo */
 .faq-item button {
   background-color: var(--cor6);
   border: 1px solid var(--cor5);
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   text-align: left;
   cursor: pointer;
   font-weight: bold;
   color: var(--cor1);
+  margin-bottom: 15px; /* Mais espaçamento entre o botão e a resposta */
 }
 
 /* Resposta da FAQ escondida por padrão */
@@ -194,6 +163,7 @@ p {
   padding: 10px;
   background-color: var(--cor0);
   border-left: 4px solid var(--cor4);
+  margin-top: 10px; /* Mais espaço entre a pergunta e a resposta */
 }
 
 /* ==================== */
@@ -202,28 +172,41 @@ p {
 form {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 form label {
-  margin-top: 10px;
-}
-
-/* Campos de entrada e área de texto */
-form input, form textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid var(--cor1);
-  border-radius: 4px;
-}
-
-/* Botão do formulário */
-form button {
   margin-top: 15px;
-  padding: 10px;
+  font-weight: 600;
+  color: var(--cor4);
+}
+
+form input, form textarea {
+  padding: 12px;
+  margin-top: 10px; /* Aumentei o espaçamento entre os campos */
+  border: 1px solid var(--cor1);
+  border-radius: 6px;
+  margin-bottom: 25px; /* Mais espaçamento entre os campos */
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px 20px;
   background-color: var(--cor8);
   color: var(--cor0);
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--cor3);
 }
 
 /* ==================== */
@@ -231,7 +214,91 @@ form button {
 /* ==================== */
 footer {
   background-color: var(--cor5);
+  padding: 30px 0; /* Aumentei o padding do footer */
+  text-align: center;
+  color: var(--cor7);
+  margin-top: 50px; /* Mais espaço entre o conteúdo e o footer */
+}
+/* ============================= */
+/*       FORMULÁRIO DE LOGIN     */
+/* ============================= */
+#login-section, #cadastro-section {
+  background-color: var(--cor0);
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form label {
+  margin-top: 10px;
+  font-family: var(--font-destaque);
+  color: var(--cor4);
+}
+
+form input {
+  padding: 12px;
+  border: 1px solid var(--cor5);
+  border-radius: 6px;
+  font-family: var(--font-destaque);
+  margin-bottom: 15px;
+}
+
+form input:focus {
+  border-color: var(--cor2);
+  outline: none;
+}
+
+form button {
+  padding: 12px 24px;
+  background-color: var(--cor2);
+  color: var(--cor0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-destaque);
+  font-weight: 600;
+  font-size: 1rem;
+}
+form button:hover {
+  background-color: var(--cor3);
+  transform: scale(1.02);
+}
+footer {
+  background-color: var(--cor5);
   padding: 20px 0;
   text-align: center;
   color: var(--cor7);
+}
+
+/* Link para alternar entre login e cadastro */
+form p a {
+  color: var(--cor2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+form p a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o footer */
+footer {
+  background-color: var(--cor5);
+  padding: 30px 0;
+  text-align: center;
+  color: var(--cor7);
+  margin-top: 50px;
 }

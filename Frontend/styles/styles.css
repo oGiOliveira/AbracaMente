@@ -113,6 +113,7 @@ nav ul li {
 
 /* Estilo dos links do menu */
 nav ul li a {
+  
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;

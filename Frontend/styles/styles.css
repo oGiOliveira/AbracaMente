@@ -94,7 +94,6 @@ header {
 /* Título do site no cabeçalho */
 header h1 {
   font-family:var(--font-titulo);
-  text-align: left;
   color: var(--cor4);
 }
 
@@ -102,7 +101,7 @@ header h1 {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex;
   margin-top: 10px;
   flex-wrap: wrap;
 }
@@ -113,14 +112,19 @@ nav ul li {
 
 /* Estilo dos links do menu */
 nav ul li a {
-  
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 600;
   font-style: normal;
   text-decoration: none;
   color: var(--cor3);
   font-weight: bold;
+}
+.container {
+  display: flex;
+  justify-content: space-between; /* separa h1 e menu */
+  align-items: center;
+  padding: 0 10px;
 }
 
 /* ==================== */
@@ -158,6 +162,10 @@ h2 {
   font-family: 'itc';
   color: var(--cor4);
   margin-bottom: 10px;
+}
+
+p {
+  
 }
 
 /* ==================== */

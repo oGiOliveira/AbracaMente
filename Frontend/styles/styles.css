@@ -1,12 +1,42 @@
 @charset "UTF-8"; 
 
-/* Lembrando que a Tipografia "ITC MOTTER CORPUS" são para textos grandes, titulos e etc.
-A tipografia " Coustard " é para texto corrido.
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap');
+/* 
+  USO PARA TEXTOS CORRIDOS
 
-Se vocês acharem que vão precisar de mais uma intermediária para 
-textos destaques eu sugiro usar o " Montserrat " mas podemos acertar isso depois. */
+  coustard-regular {
+  font-family: "Coustard", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.coustard-black {
+  font-family: "Coustard", serif;
+  font-weight: 900;
+  font-style: normal;
+} */
 
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+  USO PARA DESTAQUES
+
+  .montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* USO PARA TÍTULOS */
+@font-face {
+  font-family: 'itc';
+  src: url('itc-motter-corpus/MotterCorpusStd-Regular.ttf') 
+  format(truetype);
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 /* ==================== */
 /* Variáveis globais    */
@@ -18,6 +48,13 @@ textos destaques eu sugiro usar o " Montserrat " mas podemos acertar isso depois
   --cor3: #004aad;            /* Azul intermediário */
   --cor4: #063b82;            /* Azul escuro */
   --cor5: #ccc;
+  --cor6: #e4f1f6;
+  --cor7: #333;
+  --cor8: #5a8ea2;
+
+
+  --font-padrao: arial, verdana, helvetica, sans-serif;
+  --font-titulo: 'itc';
 }
 
 /* Reset básico para todos os elementos */
@@ -31,9 +68,11 @@ textos destaques eu sugiro usar o " Montserrat " mas podemos acertar isso depois
 /* Estilo global do <body>  */
 /* ========================= */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Coustard", serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: var(--cor0);
-  color: #333;
+  color: var(--cor7);
 }
 
 /* Container para centralizar e limitar o conteúdo */
@@ -54,7 +93,8 @@ header {
 
 /* Título do site no cabeçalho */
 header h1 {
-  text-align: center;
+  font-family:var(--font-titulo);
+  text-align: left;
   color: var(--cor4);
 }
 
@@ -73,8 +113,12 @@ nav ul li {
 
 /* Estilo dos links do menu */
 nav ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
   text-decoration: none;
-  color: #5aa266;
+  color: var(--cor3);
   font-weight: bold;
 }
 
@@ -82,10 +126,10 @@ nav ul li a {
 /* Seção Hero (destaque)*/
 /* ==================== */
 .hero {
-  background-color: #d009eb;
+  background-color: var(--cor6);
   padding: 80px 0;
   text-align: center;
-  color: #e00c0c;
+  color: var(--cor1);
 }
 
 .hero h2 {
@@ -110,7 +154,8 @@ section {
 
 /* Títulos internos das seções */
 h2 {
-  color: #5a8ea2;
+  font-family: 'itc';
+  color: var(--cor4);
   margin-bottom: 10px;
 }
 
@@ -123,22 +168,22 @@ h2 {
 
 /* Botões da FAQ com estilo limpo */
 .faq-item button {
-  background-color: #f0f8fa;
-  border: 1px solid #ccc;
+  background-color: var(--cor6);
+  border: 1px solid var(--cor5);
   padding: 10px;
   width: 100%;
   text-align: left;
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: var(--cor1);
 }
 
 /* Resposta da FAQ escondida por padrão */
 .faq-item .resposta {
   display: none;
   padding: 10px;
-  background-color: #f9f9f9;
-  border-left: 4px solid #5a8ea2;
+  background-color: var(--cor0);
+  border-left: 4px solid var(--cor4);
 }
 
 /* ==================== */
@@ -157,7 +202,7 @@ form label {
 form input, form textarea {
   padding: 10px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--cor1);
   border-radius: 4px;
 }
 
@@ -165,8 +210,8 @@ form input, form textarea {
 form button {
   margin-top: 15px;
   padding: 10px;
-  background-color: #5a8ea2;
-  color: white;
+  background-color: var(--cor8);
+  color: var(--cor0);
   border: none;
   cursor: pointer;
 }
@@ -175,8 +220,8 @@ form button {
 /* Footer do site       */
 /* ==================== */
 footer {
-  background-color: #f5f5f5;
+  background-color: var(--cor5);
   padding: 20px 0;
   text-align: center;
-  color: #777;
+  color: var(--cor7);
 }

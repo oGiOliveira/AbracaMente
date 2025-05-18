@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro - Abraçamente</title>
+  <link rel="stylesheet" href="../../styles/styles_register.css" />
+  <link rel="shortcut icon" href="../imagens/cardiogram.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cadastro</h1>
+    </header>
+    <main>
+      <form id="registroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+
+        <label for="confirmarSenha">Confirmar Senha:</label>
+        <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+      <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+      <p><a href="../index.html">Voltar para a página inicial</a></p>
+    </main>
+  </div>
+
+  <script src="../../scripts/login-registro.js"></script>
+</body>
+</html>

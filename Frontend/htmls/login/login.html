@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login ou Cadastre-se</title>
-  <link rel="stylesheet" href="style.css"> <!-- Referência ao seu CSS -->
 </head>
 <body>
-  <div class="container">
+  <div>
     <header>
       <h1>Login ou Cadastre-se</h1>
     </header>
@@ -16,17 +15,17 @@
       <!-- Formulário de Login -->
       <section id="login-section">
         <h2>Login</h2>
-        <form action="#" method="POST">
+        <form action="login.html" method="POST">
           <div>
-            <label for="login-email">E-mail:</label>
-            <input type="email" id="login-email" name="email" placeholder="Digite seu e-mail" required>
+            <label for="login-email">E-mail:</label><br />
+            <input type="email" id="login-email" name="email" placeholder="Digite seu e-mail" required />
           </div>
 
           <div>
-            <label for="login-senha">Senha:</label>
-            <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
+            <label for="login-senha">Senha:</label><br />
+            <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required />
           </div>
-          
+
           <button type="submit">Entrar</button>
         </form>
         <p>Não tem uma conta? <a href="javascript:void(0);" onclick="toggleForm()">Cadastre-se aqui</a></p>
@@ -35,25 +34,25 @@
       <!-- Formulário de Cadastro -->
       <section id="cadastro-section" style="display:none;">
         <h2>Cadastro</h2>
-        <form action="#" method="POST">
+        <form action="registro.html" method="POST">
           <div>
-            <label for="cadastro-nome">Nome:</label>
-            <input type="text" id="cadastro-nome" name="nome" placeholder="Digite seu nome" required>
+            <label for="cadastro-nome">Nome:</label><br />
+            <input type="text" id="cadastro-nome" name="nome" placeholder="Digite seu nome" required />
           </div>
 
           <div>
-            <label for="cadastro-email">E-mail:</label>
-            <input type="email" id="cadastro-email" name="email" placeholder="Digite seu e-mail" required>
+            <label for="cadastro-email">E-mail:</label><br />
+            <input type="email" id="cadastro-email" name="email" placeholder="Digite seu e-mail" required />
           </div>
 
           <div>
-            <label for="cadastro-senha">Senha:</label>
-            <input type="password" id="cadastro-senha" name="senha" placeholder="Digite sua senha" required>
+            <label for="cadastro-senha">Senha:</label><br />
+            <input type="password" id="cadastro-senha" name="senha" placeholder="Digite sua senha" required />
           </div>
 
           <div>
-            <label for="cadastro-confirmar-senha">Confirmar Senha:</label>
-            <input type="password" id="cadastro-confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
+            <label for="cadastro-confirmar-senha">Confirmar Senha:</label><br />
+            <input type="password" id="cadastro-confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required />
           </div>
 
           <button type="submit">Cadastrar</button>
@@ -68,12 +67,10 @@
   </div>
 
   <script>
-    // Função para alternar entre login e cadastro
     function toggleForm() {
       const loginSection = document.getElementById('login-section');
       const cadastroSection = document.getElementById('cadastro-section');
-      
-      // Alterna a visibilidade dos formulários
+
       if (loginSection.style.display === "none") {
         loginSection.style.display = "block";
         cadastroSection.style.display = "none";

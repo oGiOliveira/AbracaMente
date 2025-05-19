@@ -4,11 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
+
   <link rel="stylesheet" href="{% static 'styles_agendamento.css' %}" />
+  
   <title>Agendamento - Abraçamente</title>
 </head>
 <body>
   <div class="container">
+    <a href="/" title='Voltar para a página anterior' class="voltar">
+      <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
+    </a>
+
     <h1>Agende sua consulta</h1>
     <p>Preencha os campos abaixo para agendar uma consulta com a nossa equipe.</p>
 

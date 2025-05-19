@@ -21,7 +21,7 @@
           <li><a href="#duvidas">Dúvidas Frequentes</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a href="../htmls/agendamentos/agendamento.html" class="agendamento-link">Agendamento</a></li>
-		  <li><a href="../htmls/login/login.html" class="agendamento-link">Login</a></li>
+		  <li><a href="/register/" class="agendamento-link">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -29,7 +29,10 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Bem-vindo à Abraçamente</h2>
+      <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à Abraçamente</h2>
+      
+		  {% block content %}{% endblock %} 
+
       <p>Um espaço dedicado ao cuidado da sua saúde mental.</p>
     </div>
   </section>

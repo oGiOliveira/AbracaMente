@@ -15,13 +15,15 @@
     <main>
       <form id="loginForm">
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+        <input type="text" id="username" name="username" placeholder="Digite seu nome de usuario" required />
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
 
         <button type="submit">Entrar</button>
       </form>
+      <a href="{% url 'password_reset' %}">Esqueci minha senha</a>
+      
       <p>Não tem uma conta? <a href="../login/register.html">Cadastre-se aqui</a></p>
       <p><a href="../index.html">Voltar para a página inicial</a></p>
     </main>

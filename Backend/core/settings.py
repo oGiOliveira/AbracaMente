@@ -119,7 +119,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/' 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '../Frontend/styles'),
-    os.path.join(BASE_DIR, '../Frontend/scripts')
+    os.path.join(BASE_DIR, '../Frontend/scripts'),
+    os.path.join(BASE_DIR, '../Frontend/htmls'),
 ]
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')

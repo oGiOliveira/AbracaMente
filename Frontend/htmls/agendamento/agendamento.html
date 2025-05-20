@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
+
+  <link rel="stylesheet" href="{% static 'styles_agendamento.css' %}" />
+  
+  <title>Agendamento - Abraçamente</title>
+</head>
+<body>
+  <div class="container">
+    <a href="/" title='Voltar para a página anterior' class="voltar">
+      <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
+    </a>
+
+    <h1>Agende sua consulta</h1>
+    <p>Preencha os campos abaixo para agendar uma consulta com a nossa equipe.</p>
+
+    <form>
+	<div id="mensagem-confirmacao" style="display: none; margin-top: 20px; text-align: center; color: green; font-weight: 600;">
+  Agendamento realizado com sucesso!
+</div>
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+      </div>
+
+      <div>
+        <label for="data">Data da Consulta:</label>
+        <input type="date" id="data" name="data" required />
+      </div>
+
+      <div>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required />
+      </div>
+
+      <button type="submit">Agendar</button>
+    </form>
+	
+	<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // impede o envio padrão
+
+    // Aqui você poderia enviar os dados para um backend se quiser
+
+    // Redireciona para a página de agradecimento
+    window.location.href = "{% url 'agendamento_com_sucesso' %}";
+  });
+</script>
+  </div>
+</body>
+</html>

@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abraçamente - Psicologia</title>
-  <link rel="stylesheet" href="../styles/styles.css" />
-  <link rel="shortcut icon" href="../../Frontend/imagens/cardiogram.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
 </head>
 <body>
 
@@ -17,8 +20,8 @@
           <li><a href="#quem-somos">Quem Somos</a></li>
           <li><a href="#duvidas">Dúvidas Frequentes</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="../htmls/agendamentos/agendamento.html" class="agendamento-link">Agendamento</a></li>
-		  <li><a href="../htmls/login/login.html" class="agendamento-link">Login</a></li>
+          <li><a href="{% url 'agendamento' %}" class="agendamento-link">Agendamento</a></li>
+		  <li><a href="/register/" class="agendamento-link">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -26,7 +29,10 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Bem-vindo à Abraçamente</h2>
+      <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à Abraçamente</h2>
+      
+		  {% block content %}{% endblock %} 
+
       <p>Um espaço dedicado ao cuidado da sua saúde mental.</p>
     </div>
   </section>
@@ -78,6 +84,6 @@
     </div>
   </footer>
 
-  <script src="../scripts/script.js"></script>
+  <script src="{% static 'script.js' %}"></script>
 </body>
 </html>

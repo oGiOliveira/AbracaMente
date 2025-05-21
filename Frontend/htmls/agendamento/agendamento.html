@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} <!-- carregando uma função do django para implementar um conteudo estático (css) no futuro -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,18 +15,19 @@
   <div class="container">
     <div class="retornar">
       <a href="/" title='Voltar para a página anterior' class="botao-voltar">
-      <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
+        <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
       </a>
     </div>
     
-
     <h1>Agende sua consulta</h1>
     <p>Preencha os campos abaixo para agendar uma consulta com a nossa equipe.</p>
 
-    <form>
-	<div id="mensagem-confirmacao" style="display: none; margin-top: 20px; text-align: center; color: green; font-weight: 600;">
-  Agendamento realizado com sucesso!
-</div>
+    <form method="post" action="{% url 'agendamento' %}">
+      {% csrf_token  %} <!-- token do django que protege formularios contra ataques CSRF -->
+      <div id="mensagem-confirmacao" style="display: none; margin-top: 20px; text-align: center; color: green; font-weight: 600;">
+        Agendamento realizado com sucesso!
+      </div>
+
       <div>
         <label for="nome">Nome Completo *</label>
         <input type="text" id="nome" name="nome" required />
@@ -60,14 +61,14 @@
           <option value="presencial">Presencial</option>
         </select>
       </div>
-      
+        
       <div class="datas">
         <label for="data" class="texto-agenda">Datas Disponiveis</label>
         <div class="disponiveis">
           <label>
             <input type="radio" name="data" value="24/05/2025" required />
             24/05/2025
-          </label>
+            </label>
           <label>
             <input type="radio" name="data" value="31/05/2025" />
             31/05/2025
@@ -95,10 +96,23 @@
               21:00
             </label>
         </div>
-    </div>
+      </div>
+      
+      <hr>
+
+      <label for="mensagem" class="mensagem">Conte um Pouco Sobre o Motivo da Consulta:</label>
+      <textarea id="mensagem" ></textarea>
+
       <button type="submit">Agendar</button>
     </form>
+
+
+  <footer>
+    <p>&copy; 2025 Abraçamente - Todos os direitos reservados.</p>
+  </footer>
 	
+</div>
+
 	<script>
   const form = document.querySelector('form');
 
@@ -111,10 +125,5 @@
     window.location.href = "{% url 'agendamento_com_sucesso' %}";
   });
 </script>
-
-    <footer>
-      <p>&copy; 2025 Abraçamente - Todos os direitos reservados.</p>
-    </footer>
-  </div>
 </body>
 </html>

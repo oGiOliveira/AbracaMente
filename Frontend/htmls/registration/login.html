@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} <!-- irá extender o conteudo de base.html com o deste aqui -->
 
-{% block title %}Login{% endblock %}
+{% block title %}Login{% endblock %} <!-- titulo que entrará no espaço que foi reservado para o titulo de cada pagina -->
 
-{% block content %}
+{% block content %} <!-- este trecho sera guardado para ser inserido em uma parte de base.html: -->
 
 <div class="col-md-4">
     <form method="post">
-        {% csrf_token %}
+        {% csrf_token %} <!-- token do django que protege formularios contra ataques CSRF -->
 
         <div class="mb-3">
             <label class="form-label" for="id_username">Usuário:</label>
@@ -24,4 +24,4 @@
     <a href="{% url 'password_reset' %}">Esqueci minha senha</a>
 </div>
 
-{% endblock %}
+{% endblock %} <!-- fim do trecho que sera inserido -->

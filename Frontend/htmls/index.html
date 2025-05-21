@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} <!-- carregando uma função do django para implementar um conteudo estático (css) no futuro -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,7 +21,12 @@
           <li><a href="#duvidas">Dúvidas Frequentes</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a href="{% url 'agendamento' %}" class="agendamento-link">Agendamento</a></li>
-		  <li><a href="/register/" class="agendamento-link">Login</a></li>
+          
+          {% if user.is_authenticated %}
+		        <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
+          {% else %}
+            <li><a href="/register/" class="agendamento-link">Conectar</a></li>
+          {% endif%}
         </ul>
       </nav>
     </div>
@@ -30,9 +35,6 @@
   <section class="hero">
     <div class="container">
       <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à Abraçamente</h2>
-      
-		  {% block content %}{% endblock %} 
-
       <p>Um espaço dedicado ao cuidado da sua saúde mental.</p>
     </div>
   </section>

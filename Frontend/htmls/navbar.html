@@ -22,18 +22,18 @@
             </ul>
 
             <div class="d-flex gap-3 align-items-center">
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated %} <!-- função do django, se o usuario estiver autenticado mostra o conteudo abaixo: -->
                     <span class="nav-text">
-                        {{user.username}}
+                        {{user.username}} <!-- mostrar o nome de usuario -->
                     </span>
                     <form method="post" action="{% url 'logout' %}" style="display:inline;">
-                        {% csrf_token %}
+                        {% csrf_token %} <!-- token do django que protege formularios contra ataques CSRF -->
                         <button type="submit" class="btn btn-outline-danger">Sair</button>
                     </form>
-                {% else %}
+                {% else %} <!-- se o usuario não estiver logado, mostra-ra os seguintes botoes -->
                     <a class="btn btn-outline-primary" href="{% url 'login' %}">Entrar</a>
                     <a class="btn btn-success" href="{% url 'register' %}">Registrar</a>
-                {% endif %} 
+                {% endif %} <!-- fim do campo -->
 
             </div>
            

@@ -178,6 +178,29 @@ select#genero {
   margin: 6px 0;
 }
 
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: block;
+}
+
+form textarea {
+  height: 120px;
+  width: 100%;
+  resize: none;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid var(--cor1);
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-family: var(--font-destaque);
+  font-size: 1em;
+}
+
+form textarea {
+  height: 150px;
+}
+
 /* ============================= */
 /*            FOOTER             */
 /* ============================= */

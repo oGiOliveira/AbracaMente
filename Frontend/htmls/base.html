@@ -1,33 +1,31 @@
-{% load static %}
+{% load static %} <!-- carregando uma função do django para implementar um conteudo estático (css) no futuro -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% block title %}{% endblock %}</title>
+
+	<title>{% block title %}{% endblock %}</title> <!-- separando um espaço para que o titulo seja alterado automaticamente ao acessar paginas especificas, confira em cada html de password que está destacado -->
 
 	<link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
 	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> <!-- # CSS provisorio -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> <!-- # CSS provisorio das paginas login e register-->
 	
 	<!-- <link rel="stylesheet" href="{% static 'styles/ [coloque o caminho aqui] .css' %}">  # CSS da glr vai aq-->
-
-	{% block extra_css %}{% endblock %} <!-- # guardando espaço pra nas outras paginas o css da glr entrar -->
-	
 </head>
 <body>  
 	
-	{% include 'navbar.html' %}
+	{% include 'navbar.html' %} <!-- serve para "importar" o navbar para essa pagina sem ter q escrever ela inteira aqui -->
  
 	
-	<div class="container"> 
+	<div class="container" style="display:flex; flex-direction: column; align-items: center;"> 
 	 
-		{% if user.is_authenticated %}
-			<h1>Olá, {{user.username}}</h1>  
-		{% endif %} 
+		{% if user.is_authenticated %} <!-- função do django, se o usuario estiver autenticado mostra o conteudo abaixo: -->
+			<h1>Olá, {{user.username}}</h1>  <!-- olá, [nome de usuario] -->
+		{% endif %} <!-- fim do trecho -->
 			 
-		{% block content %}{% endblock %} 
+		{% block content %}{% endblock %} <!-- aqui esta guardando espaço para as paginas de password poderem escrever seu conteudo aqui, veja no html delas o trecho destacado que esta sendo guardado para usar aqui -->
 	</div>
 
 	<!-- JS-->
@@ -37,7 +35,7 @@
 	
 	<script src="{% static 'js/scripts.js' %}"></script>
 
-	{% block scripts %}{% endblock scripts %} 
+	{% block scripts %}{% endblock scripts %} <!-- guardando espaço para chamar os scripts, dessa forma, ao inves de chama-los escrevendo em cada pagina de password, login e registro, apenas guardamos este espaço uma vez e então escrevemos menos linha de codigo e facilita manutenão -->
 
 </body>
 </html>

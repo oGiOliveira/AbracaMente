@@ -9,14 +9,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="/"><img src="{% static 'LogoIcone.png' %}" alt="Logo Abracamente que leva para a página inicial"> UniBTA Therapy </a>
+        <a class="navbar-brand" href="/"><img src="{% static 'LogoMDTerapia.png' %}" alt="Logo Abracamente que leva para a página inicial"></a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Voltar</a>
+                    <a class="nav-link active" aria-current="page" href="/"></a>
                 </li> 
 
             </ul>
@@ -28,7 +28,7 @@
                     </span>
                     <form method="post" action="{% url 'logout' %}" style="display:inline;">
                         {% csrf_token %} <!-- token do django que protege formularios contra ataques CSRF -->
-                        <button type="submit" class="btn btn-outline-danger">Sair</button>
+                        <button type="submit" class="btn btn-outline-danger">Sair da Conta</button>
                     </form>
                 {% else %} <!-- se o usuario não estiver logado, mostra-ra os seguintes botoes -->
                     <a class="btn btn-outline-primary" href="{% url 'login' %}">Entrar</a>

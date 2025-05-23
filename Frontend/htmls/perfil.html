@@ -6,7 +6,28 @@
 
 {% block content %}
 <div style="display: flex; flex-direction: column; align-items: center;">
-    <h1>vc esta no seu perfil yaaay</h1>
-    <img src="{% static 'emoji-legal.jpg' %}" alt="emoji legal">
+    <h1>Seu Perfil</h1>
+    <div style="margin-top: 20px; width: 300px;">
+        <label for="username"><strong>Nome de Usúario:</strong></label>
+        <div style="display: flex; align-items: center;">
+            <input type="text" id="username" class="form-control mb-2" value="{{ user.username}}" readonly>
+            <button type="button" id="edit-username" style="background: none; border: none; margin-left: 5px; cursor:pointer; ">
+                <img src="{% static 'pen.png' %}" alt="Icone de um lápis para editar o nome de usuario">
+            </button>
+        </div>
+        <label><strong>Email:</strong></label>
+        <input type="text" id="email" class="form-control mb-2" value="{{ user.email}}" readonly>
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const editBtn = document.getElementById('edit-username');
+        const usernameInput = document.getElementById('username');
+        editBtn.addEventListener('click', function() {
+            usernameInput.readOnly = false;
+            usernameInput.focus();
+        })
+    })
+</script>
 {% endblock %}

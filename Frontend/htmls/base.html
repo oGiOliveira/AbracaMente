@@ -8,9 +8,11 @@
 
 	<title>{% block title %}{% endblock %}</title> <!-- separando um espaço para que o titulo seja alterado automaticamente ao acessar paginas especificas, confira em cada html de password que está destacado -->
 
-	<link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
+	<link rel="shortcut icon" href="{% static 'LogoMDTerapia.png' %}" type="image/x-icon">
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> <!-- # CSS provisorio das paginas login e register-->
+
+	<link rel="stylesheet" href="{% static 'styles/styles.css' %}">
 	
 	<!-- <link rel="stylesheet" href="{% static 'styles/ [coloque o caminho aqui] .css' %}">  # CSS da glr vai aq-->
 </head>
@@ -20,11 +22,6 @@
  
 	
 	<div class="container" style="display:flex; flex-direction: column; align-items: center;"> 
-	 
-		{% if user.is_authenticated %} <!-- função do django, se o usuario estiver autenticado mostra o conteudo abaixo: -->
-			<h1>Olá, {{user.username}}</h1>  <!-- olá, [nome de usuario] -->
-		{% endif %} <!-- fim do trecho -->
-			 
 		{% block content %}{% endblock %} <!-- aqui esta guardando espaço para as paginas de password poderem escrever seu conteudo aqui, veja no html delas o trecho destacado que esta sendo guardado para usar aqui -->
 	</div>
 

@@ -8,10 +8,10 @@
 /* ==================== */
 :root {
   --cor0: rgb(255, 255, 255); /* Cor de fundo clara */
-  --cor1: black;              /* Texto padrão escuro */
-  --cor2: #006dff;            /* Azul vibrante */
-  --cor3: #004aad;            /* Azul intermediário */
-  --cor4: #063b82;            /* Azul escuro */
+  --cor1: black;            
+  --cor2: #006dff;    
+  --cor3: #004aad;         
+  --cor4: #063b82;            
   --cor5: #ccc;
   --cor6: #e4f1f6;
   --cor7: #333;

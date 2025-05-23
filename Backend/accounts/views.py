@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from .admin import CustomUserCreationForm
 from django.contrib import messages
@@ -19,3 +20,4 @@ def register(request):
                 print('invalid registration details')
                 
         return render(request, "registration/register.html",{"form": form})
+

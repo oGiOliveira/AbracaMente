@@ -7,8 +7,10 @@
     <h4>Criar uma conta</h4>
     <form method="post">
         {% csrf_token %} <!-- token do django que protege formularios contra ataques CSRF -->
-        {{ form.as_p }} <!-- função do django para formulario -->
-        <button class="btn btn-warning mt-3" type="submit">Registrar</button>
+        {{ form.as_p }} <!-- função do django para formulario predefinido (se quiser alterar algo especifico chama o pato) -->
+        <button class="btn btn-warning mt-3" type="submit">
+            Registrar
+        </button>
     </form>
 </div>
 {% endblock %} <!-- fim do trecho que sera inserido -->

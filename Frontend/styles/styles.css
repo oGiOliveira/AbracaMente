@@ -100,6 +100,7 @@ nav ul li a:hover {
   padding: 100px 0; /* Aumentei o padding na seção Hero */
   text-align: center;
   color: var(--cor1);
+  border-radius: 10px;
 }
 
 .hero h2 {
@@ -125,8 +126,8 @@ section {
 
 /* Títulos internos das seções */
 h2 {
+  color: black;
   font-family: 'itc';
-  color: var(--cor0);
   margin-bottom: 20px; /* Mais espaço abaixo dos títulos */
 }
 
@@ -276,12 +277,7 @@ form button:hover {
   background-color: var(--cor2);
   transform: scale(1.02);
 }
-footer {
-  background-color: var(--cor5);
-  padding: 20px 0;
-  text-align: center;
-  color: var(--cor7);
-}
+
 
 /* Link para alternar entre login e cadastro */
 form p a {
@@ -294,11 +290,30 @@ form p a:hover {
   text-decoration: underline;
 }
 
-/* Estilo para o footer */
-footer {
-  background-color: var(--cor8);
-  padding: 30px 0;
-  text-align: center;
-  color: var(--cor7);
-  margin-top: 50px;
+/* Footer com link de direcionamento ao instragram */
+
+footer .container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+}
+
+footer .container p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.instagram-link {
+  margin-left: 10px;
+  color: #E1306C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instagram-link i {
+  margin-right: 5px;
 }

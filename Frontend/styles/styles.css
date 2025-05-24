@@ -9,13 +9,13 @@
 :root {
   --cor0: rgb(255, 255, 255); /* Cor de fundo clara */
   --cor1: black;            
-  --cor2: #006dff;    
-  --cor3: #004aad;         
-  --cor4: #063b82;            
+  --cor2: #375997;    
+  --cor3: #50768b;         
+  --cor4: #375997;            
   --cor5: #ccc;
-  --cor6: #e4f1f6;
+  --cor6: #d2e4eb;
   --cor7: #333;
-  --cor8: #F6BD85; /* #5a8ea2 */
+  --cor8: #f7c797; /* #5a8ea2 */
   --font-padrao: arial, verdana, helvetica, sans-serif;
   --font-titulo: 'itc';
 }
@@ -56,6 +56,22 @@ header {
   padding: 30px 0; /* Aumentei o padding no header */
   border-bottom: 1px solid var(--cor7);
 }
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.LogoMDTerapia {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 220px;
+  height: auto;
+}
+
 
 /* Título do site no cabeçalho */
 header h1 {

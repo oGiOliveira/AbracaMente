@@ -16,7 +16,7 @@
 
   <header>
     <div class="container">
-      <h1>MDTerapia</h1>
+      <img src="{% static 'LogoMDTerapiaGrande.png' %}" alt="Logo da MDTerapia">
       <nav>
         <ul>
           <li><a href="#quem-somos">Quem Somos</a></li>
@@ -36,7 +36,7 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à MDTerapia</h2>
+      <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à MDTerapia Cuidamente</h2>
       <p>Um espaço dedicado ao cuidado da sua saúde mental.</p>
     </div>
   </section>

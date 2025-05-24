@@ -19,6 +19,19 @@
   --font-padrao: arial, verdana, helvetica, sans-serif;
   --font-titulo: 'itc';
 }
+.darkmode {
+    --cor0: #070b1d ; /* Cor de fundo clara */
+  --cor1: #ffffff;            
+  --cor2: #404e6b;    
+  --cor3: #3f5968;         
+  --cor4: #364766;            
+  --cor5: #999999;
+  --cor6: #868c8f;
+  --cor7: #ffffff;
+  --cor8: #3a435d; /* #5a8ea2 */
+  --font-padrao: arial, verdana, helvetica, sans-serif;
+  --font-titulo: 'itc';
+}
 
 /* Reset básico para todos os elementos */
 * {
@@ -313,14 +326,14 @@ footer .container {
   justify-content: center; 
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #5c617c;
   border-radius: 15px;
 }
 
 footer .container p {
   margin: 0;
   font-size: 14px;
-  color: #333;
+  color: #4e438f;
 }
 
 .instagram-link {

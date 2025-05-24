@@ -265,13 +265,7 @@ form label {
   color: var(--cor1);
 }
 
-form input {
-  padding: 12px;
-  border: 1px solid var(--cor7);
-  border-radius: 6px;
-  font-family: var(--font-destaque);
-  margin-bottom: 15px;
-}
+
 
 form input:focus {
   border-color: var(--cor2);

@@ -131,6 +131,40 @@ form button:hover {
   transform: scale(1.02);
 }
 
+form textarea {
+  height: 120px;
+  width: 100%;
+  resize: none;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid var(--cor1);
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-family: var(--font-destaque);
+  font-size: 1em;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form select {
+  padding: 12px;
+  border: 1px solid var(--cor5);
+  border-radius: 6px;
+  font-family: var(--font-destaque);
+  width: 100%;
+  background: #fff;
+  cursor: pointer;
+  margin-bottom: 18px;
+  font-size: 1em;
+}
+
+form select, form input, form textarea {
+  margin-bottom: 18px;
+}
+
+
 select#modalidade,
 select#genero {
   padding: 12px;
@@ -183,23 +217,6 @@ hr {
   margin-top: 50px;
   margin-bottom: 50px;
   display: block;
-}
-
-form textarea {
-  height: 120px;
-  width: 100%;
-  resize: none;
-  padding: 12px;
-  margin-top: 10px;
-  border: 1px solid var(--cor1);
-  border-radius: 6px;
-  margin-bottom: 25px;
-  font-family: var(--font-destaque);
-  font-size: 1em;
-}
-
-form textarea {
-  height: 150px;
 }
 
 /* ============================= */

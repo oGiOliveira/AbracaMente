@@ -14,14 +14,16 @@
 /*       VARIÁVEIS GLOBAIS       */
 /* ============================= */
 :root {
-   --cor1: black;            
-  --cor2: #375997;    
-  --cor3: #50768b;         
-  --cor4: #375997;            
-  --cor5: #ccc;
-  --cor6: #d2e4eb;
-  --cor7: #333;
-  --cor8: #f7c797; /* #5a8ea2 */
+  --cor0: #ffffff;
+  --cor1: #000000;
+  --cor2: #006dff;
+  --cor3: #004aad;
+  --cor4: #063b82;
+  --cor5: #ccc;  
+  --cor6: #e4f1f6;   
+  --cor7: #333;   
+  --cor8: #5a8ea2;
+
   --font-padrao: "Coustard", serif;
   --font-destaque: "Montserrat", sans-serif;
   --font-titulo: 'itc';

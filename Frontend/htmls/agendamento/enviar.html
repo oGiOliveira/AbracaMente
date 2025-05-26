@@ -1,15 +1,20 @@
-{% extends 'base.html' %}
-
-{% block title %}Formulário de Agendamento{% endblock %}
-
-{% block content %}
-	<h1>Formulario de Agendamento</h1>  
-	<p>Nome: {{name}}</p>
-    <p>Celular: {{phone}}</p>
-	<p>Email: {{email}}</p>
-    <p>Gênero: {{gender}}</p>
-	<p>Modalidade: {{mode}}</p> 
-    <p>Data da Consulta: {{date}}</p>
-    <p>Hora da Consulta: {{time}}</p>
-    <p>Menssagem do(a) Cliente: {{message}}</p>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agendamento de Cliente: {{name}}</title>
+    </head>
+    <body>
+        <h1>Formulario de Agendamento</h1>  
+        <p><strong>Nome:</strong> {{name}}</p>
+        <p><strong>Celular:</strong> {{phone}}</p>
+        <p><strong>Idade:</strong> {{age}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Gênero:</strong> {{gender}}</p>
+        <p><strong>Modalidade:<strong> {{mode}}</p> 
+        <p><strong>Data da Consulta:</strong> {{date}}</p>
+        <p><strong>Hora da Consulta:</strong> {{hour}}</p>
+        <p><strong>Mensagem do(a) Cliente:</strong> {{message}}</p>
+    </body>
+</html>

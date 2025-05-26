@@ -46,9 +46,6 @@ body {
   background: linear-gradient(135deg, #e4f1f6, #ffffff);
   color: var(--cor7);
   padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
@@ -85,12 +82,8 @@ p {
 /* ============================= */
 /*         FORMULÁRIO            */
 /* ============================= */
-form div {
-  display: flex;
-  flex-direction: column;
+form {
   width: 100%;
-
-  text-align: left;
 }
 
 form label {
@@ -101,13 +94,18 @@ form label {
   color: var(--cor4);
 }
 
-form input {
+form input, form textarea, form select {
   padding: 12px;
   border: 1px solid var(--cor5);
   border-radius: 6px;
   font-family: var(--font-destaque);
   transition: all 0.3s ease;
   width: 100%;
+}
+
+form textarea {
+  height: 150px;
+  resize: none;
 }
 
 /* Botão */
@@ -131,39 +129,6 @@ form button:hover {
   transform: scale(1.02);
 }
 
-form textarea {
-  height: 120px;
-  width: 100%;
-  resize: none;
-  padding: 12px;
-  margin-top: 10px;
-  border: 1px solid var(--cor1);
-  border-radius: 6px;
-  margin-bottom: 25px;
-  font-family: var(--font-destaque);
-  font-size: 1em;
-}
-
-form textarea {
-  height: 150px;
-}
-
-form select {
-  padding: 12px;
-  border: 1px solid var(--cor5);
-  border-radius: 6px;
-  font-family: var(--font-destaque);
-  width: 100%;
-  background: #fff;
-  cursor: pointer;
-  margin-bottom: 18px;
-  font-size: 1em;
-}
-
-form select, form input, form textarea {
-  margin-bottom: 18px;
-}
-
 
 select#modalidade,
 select#genero {
@@ -183,6 +148,7 @@ select#genero {
   margin-bottom: 8px;
   align-self: center;
 }
+
 .disponiveis {
   display: flex;
   flex-direction: row;
@@ -232,24 +198,11 @@ footer {
 /* ====================================== */
 /* BOTÃO VOLTAR NO AGENDAMENTO CONFIRMADO */
 /* ====================================== */
-.voltar button {
-  padding: 12px 24px;
-  background-color: var(--cor2);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-family: var(--font-destaque);
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.voltar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
 }
-
-.voltar button:hover {
-  background-color: var(--cor3);
-  transform: scale(1.05);
-}
-
 
 /* ============================= */
 /*       MEDIA QUERY 600px      */
@@ -260,7 +213,7 @@ footer {
     font-size: 1.5em;
   }
 
-  p, form label, .texto-agenda {
+  p, form label{
     font-size: 1em;
   }
 
@@ -273,25 +226,20 @@ footer {
   }
   
   form button {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     max-width: 250px;
+  }
+
+  .container {
+    padding: 18px 8px;
   }
 
   /* Botao de voltar no sucesso.html */
   .voltar {
-    display: flex;
     justify-content: center;
     margin-top: 20px;
-  }
-
-  .voltar button {
-    width: 100%;
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin-bottom: 0;
   }
 }

@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="{% static 'styles.css' %}" />
 
-  <link rel="shortcut icon" href="{% static 'LogoMDTerapia.png' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -22,7 +22,7 @@
           <li><a href="#quem-somos">Quem Somos</a></li>
           <li><a href="#duvidas">Dúvidas Frequentes</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="{% url 'agendamento' %}" class="agendamento-link">Agendamento</a></li>
+          <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
           
           {% if user.is_authenticated %}
 		        <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>

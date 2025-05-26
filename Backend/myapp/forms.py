@@ -35,7 +35,7 @@ class AgendamentoForm(forms.ModelForm):
 
     class Meta:
         model = Agendamento
-        fields = ['name', 'phone', 'email', 'gender', 'mode', 'date', 'hour', 'message'] 
+        fields = ['name', 'phone', 'age', 'email', 'gender', 'mode', 'date', 'hour', 'message'] 
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)  

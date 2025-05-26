@@ -5,51 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <link rel="shortcut icon" href="{% static 'LogoMDTerapia.png' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
 
   <link rel="stylesheet" href="{% static 'styles_agendamento.css' %}" />
   
   <title>Agendamento - Abraçamente</title>
 </head>
 <body>
-    <div class="container">
-      <div class="retornar">
-        <a href="/" title='Voltar para a página anterior' class="botao-voltar">
-          <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
-        </a>
-
-      <form method="POST" action="{% url 'agendamento' %}" autocomplete="off">
-        <h1>Agende uma consulta</h1>
-        <p>Preencha os campos abaixo para agendar uma consulta com a nossa equipe</p>
-        {% csrf_token %}
-        {{ form.name.label_tag }} {{ form.name }}
-        {{ form.phone.label_tag }} {{ form.phone }}
-        {{ form.email.label_tag }} {{ form.email }}
-        {{ form.gender.label_tag }} {{ form.gender }}
-        {{ form.mode.label_tag }} {{ form.mode }}
-
-        <div class="texto-agenda"><strong>Datas Disponíveis</strong></div>
-        <div class="disponiveis">
-          {{ form.date }}
-        </div>
-
-        <div class="texto-agenda"><strong>Horas Disponíveis</strong></div>
-        <div class="disponiveis">
-          {{ form.hour }}
-        </div>
-
-        <div style="margin-top: 18px;">{{ form.message.label_tag }} {{ form.message }}</div>
-
-
-        <button type="submit" class="btn btn-success">Agendar</button>
-      </form>
+  <div class="container">
+    <div class="voltar">
+      <a href="/tipo-agendamento/" title='Voltar para a página anterior' class="botao-voltar">
+        <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
+      </a>
     </div>
+
+    <form method="POST" action="{% url 'agendamento' %}" autocomplete="off">
+      <h1>Agende uma consulta</h1>
+      <p>Preencha os campos abaixo para agendar uma consulta com a nossa equipe.</p>
+      {% csrf_token %}
+      {{ form.name.label_tag }} {{ form.name }}
+      {{ form.phone.label_tag }} {{ form.phone }}
+
+      <div class="texto-agenda" style="text-align: left;"><label>Idade:</label>
+        {{ form.age }}
+      </div>
+      {{ form.email.label_tag }} {{ form.email }}
+      {{ form.gender.label_tag }} {{ form.gender }}
+      {{ form.mode.label_tag }} {{ form.mode }}
+
+      <div class="texto-agenda"><label><strong>Datas Disponíveis</strong></label></div>
+      <div class="disponiveis">
+        {{ form.date }}
+      </div>
+
+      <div class="texto-agenda"><label><strong>Horas Disponíveis</strong></label></div>
+      <div class="disponiveis">
+        {{ form.hour }}
+      </div>
+
+      <div style="margin-top: 18px;">{{ form.message.label_tag }} {{ form.message }}</div>
+
+
+      <button type="submit" class="btn btn-success">Agendar</button>
+    </form>
 
   <footer>
     <p>&copy; 2025 Abraçamente - Todos os direitos reservados.</p>
   </footer>
-	
-</div>
 
 </body>
 </html>

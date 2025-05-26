@@ -1,0 +1,40 @@
+{% load static %} <!-- carregando uma função do django para implementar um conteudo estático (css) no futuro -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
+
+  <link rel="stylesheet" href="{% static 'style_tipo_agendamento.css' %}" />
+  
+  <title>Agendamento - Abraçamente</title>
+</head>
+<body>
+    <div class="containers-agendamento">
+        <div class="container">
+            <h1>Quer Agendar uma Consulta?</h1>
+            <p>Agendar uma consulta através de um pequeno formulário para a nossa equipe saber quem é você e de que tipo de atendimento precisa.</p>
+            <a href="{% url 'agendamento' %}" class="botao">
+                Agendar Consulta
+            </a>
+        </div>
+
+        <div class="container">
+            <h1>Quer Fazer uma Triagem?</h1>
+            <p>Fazendo uma triagem a nossa equipe consegue ter uma base melhor de como te atender e te oferecer um suporte mais eficiente. Ao fim da triagem você será encaminhado(a) para agendar uma consulta.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfy1SnaUKDisBNjAYnmqszUs2wURL_iJoE9NmTLtgcbZ_1Kdg/viewform?usp=header" target="_blank" rel="noopener" class="botao">
+                Fazer Triagem
+            </a>
+        </div>
+    </div>
+
+    <div class="voltar">
+        <a href="/" title="Voltar para a página anterior" class="botao-voltar">
+            <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
+        </a>
+    </div>
+
+</body>
+</html>

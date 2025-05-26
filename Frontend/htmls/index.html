@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MDTerapia - Psicologia</title>
+  <title>Abraçamente - Psicologia</title>
 
   <link rel="stylesheet" href="{% static 'styles.css' %}" />
 
-  <link rel="shortcut icon" href="{% static 'LogoMDTerapia.png' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -16,13 +16,13 @@
 
   <header>
     <div class="container">
-      <img src="{% static 'LogoMDTerapiaGrande.png' %}" alt="Logo da MDTerapia">
+
       <nav>
         <ul>
           <li><a href="#quem-somos">Quem Somos</a></li>
           <li><a href="#duvidas">Dúvidas Frequentes</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="{% url 'agendamento' %}" class="agendamento-link">Agendamento</a></li>
+          <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
           
           {% if user.is_authenticated %}
 		        <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
@@ -36,7 +36,7 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à MDTerapia Cuidamente</h2>
+      <h2>Bem-vindo(a) {% if user.is_authenticated %} "{{user.username}}" {% endif %} à  Abraçamente</h2>
       <p>Um espaço dedicado ao cuidado da sua saúde mental.</p>
     </div>
   </section>
@@ -44,7 +44,7 @@
   <main class="container">
     <section id="quem-somos">
       <h2>Quem Somos</h2>
-      <p>A MDTerapia é um espaço dedicado ao cuidado da saúde mental. Nossa missão é oferecer acolhimento, escuta e ferramentas para o bem-estar emocional, através de atendimentos psicológicos éticos e empáticos.</p>
+      <p>A Abraçamente é um espaço dedicado ao cuidado da saúde mental. Nossa missão é oferecer acolhimento, escuta e ferramentas para o bem-estar emocional, através de atendimentos psicológicos éticos e empáticos.</p>
     </section>
 
     <section id="duvidas">
@@ -85,9 +85,9 @@
   <footer>
     <div class="container">
      <p>
-      &copy; 2025 MDTerapia - Todos os direitos reservados.
+      &copy; 2025 Abraçamente - Todos os direitos reservados.
       <a href="https://www.instagram.com/unibta.oficial?igsh=MW1laGRvYXpubGg3Ng==" target="_blank" class="instagram-link">
-        <i class="fab fa-instagram"></i> MDTerapia
+        <i class="fab fa-instagram"></i> Abraçamente
       </a>
     </p>
     </div>

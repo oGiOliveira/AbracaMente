@@ -300,7 +300,7 @@ form button:hover {
 
 /* Link para alternar entre login e cadastro */
 form p a {
-  color: var(--cor2);
+  color: var(--cor8);
   font-weight: 600;
   text-decoration: none;
 }
@@ -316,7 +316,7 @@ footer .container {
   justify-content: center; 
   align-items: center;
   padding: 20px;
-  background-color: #ca2020;
+  background-color:var(--cor4) ;
   border-radius: 15px;
 }
 

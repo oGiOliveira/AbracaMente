@@ -7,7 +7,7 @@
 /* Variáveis globais    */
 /* ==================== */
 :root {
- --cor0: #ffffff;
+  --cor0: #ffffff;
   --cor1: #000000;
   --cor2: #006dff;
   --cor3: #004aad;
@@ -316,7 +316,7 @@ footer .container {
   justify-content: center; 
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #a822a8;
   border-radius: 15px;
 }
 

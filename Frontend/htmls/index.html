@@ -15,29 +15,32 @@
 <body>
   <div class="container-bg">
     <img class="imagem-fundo" src="{% static 'FundoPrincipal.png' %}" alt="Imagem de Fundo de uma Mulher Meditando">
-      <div class="container-content">
-        <header>
-          <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abraçamente">
-          <span class="titulo">Abraçamente</span>
-          <nav>
-            <ul>
-              <li><a href="#quem-somos">Quem Somos</a></li>
-              <li><a href="#duvidas">Dúvidas Frequentes</a></li>
-              <li><a href="#contato">Contato</a></li>
-              <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
-                  
-              {% if user.is_authenticated %}
-                <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
-              {% else %}
-                <li><a href="/register/" class="agendamento-link">Conectar</a></li>
-              {% endif%}
-            </ul>
-          </nav>
-        </header>
-        <h2>Foco no autoconhecimento</h2>
-        <p>Abraçamente: Autoconhecimento e equilíbrio para sua vida</p>
-        <a href="{% url 'tipo_agendamento' %}" class="cta-btn"></a>
-      </div>
+    <div class="container-content">
+      <header>
+        <nav class="navbar">
+          <div class="nav-logo">
+            <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abraçamente" class="logo-navbar">
+            <span class="titulo-navbar">Abraçamente</span>
+          </div>
+          
+          <ul>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#duvidas">Dúvidas Frequentes</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
+                    
+            {% if user.is_authenticated %}
+              <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
+            {% else %}
+              <li><a href="/register/" class="agendamento-link">Conectar</a></li>
+            {% endif%}
+          </ul>
+      </nav>
+      </header>
+      <h2>Foco no autoconhecimento</h2>
+      <p>Abraçamente: Autoconhecimento e equilíbrio para sua vida</p>
+      <a href="{% url 'tipo_agendamento' %}" class="cta-btn"></a>
+    </div>
   </div>
 
   <main class="container">
@@ -68,12 +71,12 @@
   <footer>
     <div class="container">
       <img src="{% static 'logo transparee.png' %}" alt="Logo Abracamente fixa no rodapé">Abraçamente
-     <p>
+      <p>
       &copy; 2025 Abraçamente - Todos os direitos reservados.
       <a href="https://www.instagram.com/unibta.oficial?igsh=MW1laGRvYXpubGg3Ng==" target="_blank" class="instagram-link">
         <i class="fab fa-instagram"></i> Abraçamente
       </a>
-    </p>
+      </p>
     </div>
   </footer>
 

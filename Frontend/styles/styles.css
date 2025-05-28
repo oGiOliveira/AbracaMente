@@ -49,7 +49,7 @@ body {
   padding: 0 10px; /* Padding adicional */
 }
 
-.container-bg .imagem-fundo {
+.imagem-fundo {
   width: 100%;
   min-height: 400px;
   position: relative;
@@ -58,22 +58,60 @@ body {
   justify-content: flex-start;
 }
 
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0 10px 0;
+  background: transparent;
+  border-bottom: 1px solid var(--cor7);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-navbar {
+  gap: 12px;
+}
+
+.titulo-navbar {
+  font-size: 2em;
+  color: var(--var0);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  font-family: var(--font-padrao);
+  font-weight: 600;
+  color: var(--cor0);
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: var(--cor4);
+}
+
+.titulo
 /* ==================== */
 /* Header do site       */
 /* ==================== */
-header {
-  padding: 30px 0; /* Aumentei o padding no header */
-  border-bottom: 1px solid var(--cor7);
-}
-
-header .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0;
-}
-
 .LogoMDTerapia {
   display: block;
   margin: 0 auto 20px auto;

@@ -316,10 +316,8 @@ footer .container {
   justify-content: center; 
   align-items: center;
   padding: 20px;
-  background-color: #a822a8;
-  border-radius: 15px;
-}
 
+}
 footer .container p {
   margin: 0;
   font-size: 14px;

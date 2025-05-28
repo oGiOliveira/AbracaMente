@@ -39,22 +39,26 @@ body {
   background-color: var(--cor0);
   color: var(--cor7);
   line-height: 1.6; /* Maior espaçamento entre as linhas */
-  padding: 0 20px; /* Adiciona padding nas laterais */
+ /* Adiciona padding nas laterais */
 }
 
 /* Container para centralizar e limitar o conteúdo */
 .container {
   width: 90%;
-  max-width: 1000px;
   margin: auto;
   padding: 0 10px; /* Padding adicional */
+}
+
+.container-bg .imagem-fundo {
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  background-color: rgb(0, 0, 0);
 }
 
 /* ==================== */
 /* Header do site       */
 /* ==================== */
 header {
-  background-color: var(--cor0);
   padding: 30px 0; /* Aumentei o padding no header */
   border-bottom: 1px solid var(--cor7);
 }
@@ -73,7 +77,6 @@ header .container {
   max-width: 220px;
   height: auto;
 }
-
 
 /* Título do site no cabeçalho */
 header h1 {

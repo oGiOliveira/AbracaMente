@@ -312,31 +312,78 @@ footer {
   text-align: center;
   color: var(--cor7);
   margin-top: 50px; /* Mais espaço entre o conteúdo e o footer */
+  border-radius: 20px 20px 0px 0px;
 }
 
 /* Footer com link de direcionamento ao instragram */
 
 
-footer .container {
+/* REMOVIDA 
+  footer .container {
   display: flex;
   justify-content: center; 
   align-items: center;
   padding: 20px;
-<<<<<<< HEAD
-  background-color:var(--cor4) ;
+  background-color:var(--cor0) ;
   border-radius: 15px;
-}
-=======
->>>>>>> 3e3e328c7629b54de57796dcf28d3eb38ed1843d
+} */
 
-}
 footer .container p {
   margin: 0;
   font-size: 14px;
   color: var(--cor0);
 }
 
+.logo-footer {
+  position: relative;
+  right: 45%;
+  margin-bottom: 10px;
+}
+
+.nome-rodape {
+  position: relative;
+  bottom: 10px;
+  right: 20px;
+}
+
+.deireitos{
+  position: relative;
+  top: 45px;
+  right: 30px;
+  margin: 0;
+  font-size: 14px;
+  color: var(--cor0);
+}
+
+.titulo-r {
+  position: relative;
+  text-align: center;
+  bottom: 80px;
+  font-size: 25px;
+  color: var(--cor0);
+}
+
+.subtitulo-r {
+  position: relative;
+  left: 31%;
+  bottom: 60px;
+  color: var(--cor0);
+}
+
+hr {
+  position: relative;
+  left: 28%;
+  width: 44%;
+  bottom: 75px;
+}
+
+.chat-qr {
+  
+}
 .instagram-link {
+  position: relative;
+  left: 82%;
+  bottom: 10px;
   margin-left: 10px;
   color: var(--cor0);
   text-decoration: none;

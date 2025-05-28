@@ -378,7 +378,7 @@ hr {
 }
 
 .chat-qr {
-  
+  position: relative;
 }
 .instagram-link {
   position: relative;

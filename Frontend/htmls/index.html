@@ -17,22 +17,25 @@
     <img class="imagem-fundo" src="{% static 'FundoPrincipal.png' %}" alt="Imagem de Fundo de uma Mulher Meditando">
     <div class="container-content">
       <header>
-        <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abraçamente">
-        <span class="titulo">Abraçamente</span>
-        <nav>
+        <nav class="navbar">
+          <div class="nav-logo">
+            <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abraçamente" class="logo-navbar">
+            <span class="titulo-navbar">Abraçamente</span>
+          </div>
+          
           <ul>
             <li><a href="#quem-somos">Quem Somos</a></li>
             <li><a href="#duvidas">Dúvidas Frequentes</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
-                
+                    
             {% if user.is_authenticated %}
               <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
             {% else %}
               <li><a href="/register/" class="agendamento-link">Conectar</a></li>
             {% endif%}
           </ul>
-        </nav>
+      </nav>
       </header>
       <h2>Foco no autoconhecimento</h2>
       <p>Abraçamente: Autoconhecimento e equilíbrio para sua vida</p>

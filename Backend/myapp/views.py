@@ -10,7 +10,7 @@ def sendmail_agendamento(data):
     message_body = get_template('agendamento/enviar.html').render(data)  
     email = EmailMessage('Formulário de Agendamento', 
                             message_body, settings.DEFAULT_FROM_EMAIL,
-                            to=['agendamentosconsultascontato@gmail.com'])
+                            to=['abracamente.contato@gmail.com'])
     email.content_subtype = "html"    
     return email.send()
 

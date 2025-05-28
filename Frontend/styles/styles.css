@@ -50,9 +50,12 @@ body {
 }
 
 .container-bg .imagem-fundo {
+  width: 100%;
+  min-height: 400px;
   position: relative;
-  border-radius: 0 0 20px 20px;
-  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* ==================== */
@@ -322,14 +325,10 @@ footer .container {
   justify-content: center; 
   align-items: center;
   padding: 20px;
-<<<<<<< HEAD
-  background-color:var(--cor4) ;
+  background-color:var(--cor4);
   border-radius: 15px;
 }
-=======
->>>>>>> 3e3e328c7629b54de57796dcf28d3eb38ed1843d
 
-}
 footer .container p {
   margin: 0;
   font-size: 14px;

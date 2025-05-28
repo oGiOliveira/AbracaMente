@@ -229,16 +229,6 @@ form button:hover {
   background-color: var(--cor3);
 }
 
-/* ==================== */
-/* Footer do site       */
-/* ==================== */
-footer {
-  background-color: var(--cor5);
-  padding: 30px 0; /* Aumentei o padding do footer */
-  text-align: center;
-  color: var(--cor7);
-  margin-top: 50px; /* Mais espaço entre o conteúdo e o footer */
-}
 /* ============================= */
 /*       FORMULÁRIO DE LOGIN     */
 /* ============================= */
@@ -309,7 +299,20 @@ form p a:hover {
   text-decoration: underline;
 }
 
+/* ==================== */
+/* Footer do site       */
+/* ==================== */
+
+footer {
+  background-color: var(--cor4);
+  padding: 30px 0; /* Aumentei o padding do footer */
+  text-align: center;
+  color: var(--cor7);
+  margin-top: 50px; /* Mais espaço entre o conteúdo e o footer */
+}
+
 /* Footer com link de direcionamento ao instragram */
+
 
 footer .container {
   display: flex;
@@ -323,12 +326,12 @@ footer .container {
 footer .container p {
   margin: 0;
   font-size: 14px;
-  color: #333;
+  color: var(--cor0);
 }
 
 .instagram-link {
   margin-left: 10px;
-  color: #E1306C;
+  color: var(--cor0);
   text-decoration: none;
   font-weight: bold;
 }

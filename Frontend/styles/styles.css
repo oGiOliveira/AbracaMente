@@ -37,8 +37,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: var(--cor0);
-  line-height: 1.6; /* Maior espaçamento entre as linhas */
- /* Adiciona padding nas laterais */
+  line-height: 1.6;
 }
 
 /* Container para centralizar e limitar o conteúdo */

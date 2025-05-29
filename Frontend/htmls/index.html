@@ -32,7 +32,7 @@
             {% if user.is_authenticated %}
               <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
             {% else %}
-              <li><a href="/register/" class="agendamento-link">Conectar</a></li>
+              <li><a href="/connect/" class="agendamento-link">Conectar</a></li>
             {% endif%}
           </ul>
       </nav>
@@ -90,7 +90,7 @@
 
   <footer>
     <div class="container">
-      <img src="{% static 'logoIcone.png' %}" alt="Logo Abracamente fixa no rodapé" class="logo-footer">
+      <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abracamente fixa no rodapé" class="logo-footer">
       <p class="nome-rodape">Abraçamente</p>
       <h1 class="titulo-r">A saúde mental é a base de tudo.</h1> <hr>
       <p class="subtitulo-r">A sua saúde mental vale mais do que você imagina.</p>
@@ -102,7 +102,8 @@
         <i class="fab fa-instagram"></i> Abraçamente
       </a>
       </p>
-      <img src="{% static 'ChatBotQR.jgg' %}" alt="QR code para ir ao chat Bot!" class="chat-qr">
+      <p>Converse com nosso Chatbot pelo QR Code:</p>
+      <img src="{% static 'ChatBotQR.jpg' %}" alt="QR code para ir ao chat Bot!" class="chat-qr">
     </div>
   </footer>
 

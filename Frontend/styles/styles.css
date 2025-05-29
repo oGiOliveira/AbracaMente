@@ -166,7 +166,7 @@ body {
 .esgotado-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 40px;
   border-radius: 18px;
   padding: 40px 3vw;
@@ -174,12 +174,15 @@ body {
 }
 
 .esgotado-texto {
+  position: absolute;
   margin-top: 100px;
-  flex: 1 1 0;
+  margin-bottom: 1009px;
+  flex: 2 2 0;
   max-width: 52%;
-  display: flex;
+  display: flex-end;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -203,6 +206,8 @@ body {
 }
 
 .esgotado-img {
+  margin-top: 100px;
+  position:relative;
   flex: 1 1 0;
   display: flex;
   align-items: center;
@@ -416,4 +421,49 @@ hr {
     max-height: 300px;
     border-radius: 0 0 20px 20px;
   }
+}
+footer {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+footer p, footer a {
+  display: block;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* espaçamento entre colunas */
+}
+
+.remedio-img {
+  margin-top: px;
+  margin-bottom: 200px;
+  position:relative;
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.remedio-img img {
+  max-width: 370px;
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.remedio-texto {
+  margin-top: 300px;
+  margin-bottom: 100px;
+  flex: 2 2 0;
+  max-width: 52%;
+  display: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
 }

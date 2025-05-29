@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abraçamente - Psicologia</title>
-
   <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles_resposivo.css' %}" />
 
   <link rel="shortcut icon" href="{% static 'LogoIcone.png' %}" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -32,7 +33,7 @@
             {% if user.is_authenticated %}
               <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
             {% else %}
-              <li><a href="/register/" class="agendamento-link">Conectar</a></li>
+              <li><a href="/connect/" class="agendamento-link">Conectar</a></li>
             {% endif%}
           </ul>
       </nav>
@@ -47,51 +48,53 @@
   </div>
 
   <main class="container" class="esgotado-section">
-    <section id="esgotado">
-      <div class="esgotado-texto">
-        <h2>Você está se sentindo esgotado? Cansaço constante, irritação no trabalho?</h2>
-        <p>A  Síndrome de Burnout é um estado de esgotamento emocional, físico e mental causado por estresse prolongado no trabalho. Caracteriza-se por exaustão, distanciamento das relações e redução da eficácia profissional.</p>
-      </div>
+  
+  <section id="esgotado" data-aos="fade-up">
+    <div class="esgotado-texto">
+      <h2>Você está se sentindo esgotado? Cansaço constante, irritação no trabalho?</h2>
+      <p>A Síndrome de Burnout é um estado de esgotamento emocional, físico e mental causado por estresse prolongado no trabalho. Caracteriza-se por exaustão, distanciamento das relações e redução da eficácia profissional.</p>
+    </div>
 
-      <div class="esgotado-img">
-        <img src="{% static 'Esgotado.jpg' %}" alt="Mulher expresssando cansaço.">
-      </div>
-    </section>
+    <div class="esgotado-img">
+      <img src="{% static 'Esgotado.jpg' %}" alt="Mulher expresssando cansaço.">
+    </div>
+  </section>
 
-    <section id="medicamento">
-      <div class="esgotado-img">
-        <img src="{% static 'Remedio.jpg' %}" alt="Mulher expresssando cansaço.">
-      </div>
+  <section id="medicamento" data-aos="fade-left">
+    <div class="remedio-texto">
+      <h2>Dependência Química</h2>
+      <p>É uma doença biopsicossocial, ou seja, com fatores biológicos, psicológicos e sociais, não ocorrendo somente com drogas ilícitas, também existem as substâncias lícitas que causam dependência (como medicamentos psiquiátricos, álcool e tabaco) causando prejuízos na vida do indivíduo.</p>
+    </div>
 
-      <div class="medicamento-texto">
-        <h2>Dependência Química</h2>
-        <p>É uma doença biopsicossocial, ou seja, com fatores biológicos, psicológicos e sociais, não ocorrendo somente com drogas ilícitas, também existem as substâncias lícitas que causam dependência (como medicamentos psiquiátricos, álcool e tabaco) causando prejuízos na vida do indivíduo.</p>
-      </div>
-    </section>
+    <div class="remedio-img">
+      <img src="{% static 'Remedio.jpg' %}" alt="Mulher expresssando cansaço.">
+    </div>
+  </section>
 
-    <section id="duvidas">
-      <h2>Dúvidas Frequentes</h2>
-      <div class="faq">
-        <div class="faq-item">
-          <button onclick="toggleResposta(this)">Como funcionam as sessões?</button>
-          <p class="resposta">As sessões têm duração média de 50 minutos e podem ser realizadas presencialmente ou online.</p>
-        </div>
-        <div class="faq-item">
-          <button onclick="toggleResposta(this)">Preciso de encaminhamento médico?</button>
-          <p class="resposta">Não. Você pode buscar atendimento psicológico diretamente, sem necessidade de encaminhamento.</p>
-        </div>
-        <div class="faq-item">
-          <button onclick="toggleResposta(this)">Quanto custa uma sessão?</button>
-          <p class="resposta">Os valores variam conforme o profissional e a modalidade (presencial ou online). Consulte para mais informações.</p>
-        </div>
+  <section id="duvidas" data-aos="fade-right">
+    <h2>Dúvidas Frequentes</h2>
+    <div class="faq">
+      <div class="faq-item" data-aos="fade-up">
+        <button onclick="toggleResposta(this)">Como funcionam as sessões?</button>
+        <p class="resposta">As sessões têm duração média de 50 minutos e podem ser realizadas presencialmente ou online.</p>
       </div>
-    </section>
-  </main>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <button onclick="toggleResposta(this)">Preciso de encaminhamento médico?</button>
+        <p class="resposta">Não. Você pode buscar atendimento psicológico diretamente, sem necessidade de encaminhamento.</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <button onclick="toggleResposta(this)">Quanto custa uma sessão?</button>
+        <p class="resposta">Os valores variam conforme o profissional e a modalidade (presencial ou online). Consulte para mais informações.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <div class="container">
-      <img src="{% static 'logoIcone.png' %}" alt="Logo Abracamente fixa no rodapé" class="logo-footer">
-      <p class="nome-rodape">Abraçamente</p>
+      <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abracamente fixa no rodapé" class="logo-footer">
+      <p class="nome-logo">Abraçamente</p>
       <h1 class="titulo-r">A saúde mental é a base de tudo.</h1> <hr>
       <p class="subtitulo-r">A sua saúde mental vale mais do que você imagina.</p>
       <p class="deireitos">
@@ -102,10 +105,18 @@
         <i class="fab fa-instagram"></i> Abraçamente
       </a>
       </p>
-      <img src="{% static 'ChatBotQR.jgg' %}" alt="QR code para ir ao chat Bot!" class="chat-qr">
+      <p>Converse com nosso Chatbot pelo QR Code:</p>
+      <img src="{% static 'ChatBotQR.jpg' %}" alt="QR code para ir ao chat Bot!" class="chat-qr">
     </div>
   </footer>
 
   <script src="{% static 'script.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // duração da animação em ms
+    once: true, // anima apenas uma vez
+  });
+</script>
 </body>
 </html>

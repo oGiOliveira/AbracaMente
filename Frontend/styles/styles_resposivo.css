@@ -1,0 +1,101 @@
+/* Responsividade footer */
+@media (max-width: 540px){
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0; /* Aumentei o padding do footer */
+    background-color: var(--cor4);
+}
+
+footer .container p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--cor0);
+}
+
+.logo-footer {
+    display: block;
+    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
+}
+
+.nome-logo {
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: red;
+    background-color: purple;
+}
+
+.deireitos{
+  position: relative;
+  top: 45px;
+  right: 30px;
+  margin: 0;
+  font-size: 14px;
+  color: var(--cor0);
+}
+
+.titulo-r {
+  position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    top: 20px;
+    font-size: 25px;
+    color: var(--cor0);
+}
+
+.subtitulo-r {
+  position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    left: 20px;
+    top: 10px;
+    color: var(--cor0);
+}
+
+hr {
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+.chat-qr {
+  position: relative;
+}
+.instagram-link {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--cor0);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instagram-link i {
+  margin-right: 5px;
+}
+
+}
+@media (min-width: 541px) and (max-width: 1024px){
+  .titulo-r {
+  position: relative;
+  text-align: center;
+  bottom: 80px;
+  font-size: 25px;
+  color: red;
+}
+}
+
+@media (min-width: 1024px){
+  .titulo-r {
+  position: relative;
+  text-align: center;
+  bottom: 80px;
+  font-size: 25px;
+  color: rgb(255, 0, 212);
+}
+}

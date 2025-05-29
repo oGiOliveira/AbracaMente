@@ -4,7 +4,7 @@ from .admin import CustomUserCreationForm
 from django.contrib import messages
 
 # Create your views here.
-def register(request):
+def connect(request):
         form = CustomUserCreationForm()
         if request.method == "POST":
             form = CustomUserCreationForm(request.POST)
@@ -19,5 +19,5 @@ def register(request):
             else:
                 print('invalid registration details')
                 
-        return render(request, "registration/register.html",{"form": form})
+        return render(request, "registration/connect.html",{"form": form})
 

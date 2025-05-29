@@ -10,40 +10,53 @@
     <form method="post">
         {% csrf_token %} <!-- token do django que protege formularios contra ataques CSRF -->
 
-        <div class="mb-3">
-            <label class="form-label" for="id_username">Usuário:</label>
-            <input type="text" name="username" class="form-control">
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Login_Registro.css">
+    <title>Página de cadastro</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+                <span>Use seu E-mail para se cadastrar</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Criar</button>
+            </form>
         </div>
-        
-        <div class="mb-3" style="position: relative;">
-            <label class="form-label" for="id_password">Senha:</label>
-            <input type="password" name="password" id="password" class="form-control">
-            <button type="button" id="togglePassword" style="position: absolute; right: 10px; top: 38px; background: none; border: none; padding: 0; cursor: pointer; ">
-                <img id="eyeIcon" src="{% static 'hide.png' %}" alt="Icone para Mostrar Senha">
-            </button>
+                <span>Use seu E-mail e senha para entrar na sua conta</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Esqueceu sua senha?</a>
+                <button>Entrar</button>
+            </form>
         </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem-vindo(a) de volta!</h1>
+                    <p>Insira seus dados para entrar na sua conta</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bem-vindo(a) ao Abraçamente!</h1>
+                    <p>Registre-se para acessar o nosso site</p>
+                    <button class="hidden" id="register">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <button class="btn btn-warning" type="submit">Entrar</button>
-    </form>
-    
-    <a href="{% url 'password_reset' %}">Esqueci minha senha</a>
-</div>
+    <script src="Login-Registro.js"></script>
+</body>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const passwordInput = document.getElementById('password');
-        const togglePassword = document.getElementById('togglePassword');
-        const eyeIcon = document.getElementById('eyeIcon');
-        let visible = false;
-
-        togglePassword.addEventListener('click', function(e) {
-            e.preventDefault();
-            visible = !visible;
-            passwordInput.type = visible ? 'text' : 'password';
-            eyeIcon.src = visible ? "{% static 'view.png' %}" : "{% static 'hide.png' %}";
-            eyeIcon.alt = visible ? 'Ocultar senha' : 'Mostar senha';
-        })
-    })
-</script>
+</html>
 
 {% endblock %} <!-- fim do trecho que sera inserido -->

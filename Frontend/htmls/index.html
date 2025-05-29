@@ -19,7 +19,7 @@
       <header>
         <nav class="navbar">
           <div class="nav-logo">
-            <img src="{% static 'LogoTransparente.png' %}" alt="Logo Abraçamente" class="logo-navbar">
+            <img src="{% static 'LogoTransparenteColorida.png' %}" alt="Logo Abraçamente" class="logo-navbar">
             <span class="titulo-navbar">Abraçamente</span>
           </div>
           
@@ -37,16 +37,36 @@
           </ul>
       </nav>
       </header>
-      <h2>Foco no autoconhecimento</h2>
-      <p>Abraçamente: Autoconhecimento e equilíbrio para sua vida</p>
-      <a href="{% url 'tipo_agendamento' %}" class="cta-btn"></a>
+      <div class="container-texto">
+        <h2>Foco no autoconhecimento</h2>
+        <p>Abraçamente: Autoconhecimento e equilíbrio para sua vida</p>
+        <a href="{% url 'tipo_agendamento' %}" class="cta-btn">Agendar Consulta</a>
+      </div>
+      
     </div>
   </div>
 
-  <main class="container">
-    <section id="quem-somos">
-      <h2>Quem Somos</h2>
-      <p>A Abraçamente é um espaço dedicado ao cuidado da saúde mental. Nossa missão é oferecer acolhimento, escuta e ferramentas para o bem-estar emocional, através de atendimentos psicológicos éticos e empáticos.</p>
+  <main class="container" class="esgotado-section">
+    <section id="esgotado">
+      <div class="esgotado-texto">
+        <h2>Você está se sentindo esgotado? Cansaço constante, irritação no trabalho?</h2>
+        <p>A  Síndrome de Burnout é um estado de esgotamento emocional, físico e mental causado por estresse prolongado no trabalho. Caracteriza-se por exaustão, distanciamento das relações e redução da eficácia profissional.</p>
+      </div>
+
+      <div class="esgotado-img">
+        <img src="{% static 'Esgotado.jpg' %}" alt="Mulher expresssando cansaço.">
+      </div>
+    </section>
+
+    <section id="medicamento">
+      <div class="esgotado-img">
+        <img src="{% static 'Remedio.jpg' %}" alt="Mulher expresssando cansaço.">
+      </div>
+
+      <div class="medicamento-texto">
+        <h2>Dependência Química</h2>
+        <p>É uma doença biopsicossocial, ou seja, com fatores biológicos, psicológicos e sociais, não ocorrendo somente com drogas ilícitas, também existem as substâncias lícitas que causam dependência (como medicamentos psiquiátricos, álcool e tabaco) causando prejuízos na vida do indivíduo.</p>
+      </div>
     </section>
 
     <section id="duvidas">

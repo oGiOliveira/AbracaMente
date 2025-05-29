@@ -37,7 +37,6 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: var(--cor0);
-  color: var(--cor7);
   line-height: 1.6; /* Maior espaçamento entre as linhas */
  /* Adiciona padding nas laterais */
 }
@@ -51,25 +50,33 @@ body {
 
 .imagem-fundo {
   width: 100%;
-  min-height: 400px;
+  min-height: 220px;
+  max-height: 900px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 0 0 40px 40px;
 }
 
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
-  padding: 20px 0 10px 0;
+  padding: 20px 40px 10px 40px;
   background: transparent;
   border-bottom: 1px solid var(--cor7);
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo-navbar {
@@ -78,7 +85,7 @@ body {
 
 .titulo-navbar {
   font-size: 2em;
-  color: var(--var0);
+  color: white;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -105,53 +112,108 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: var(--cor4);
-}
-
-.titulo
-/* ==================== */
-/* Header do site       */
-/* ==================== */
-.LogoMDTerapia {
-  display: block;
-  margin: 0 auto 20px auto;
-  max-width: 220px;
-  height: auto;
-}
-
-/* Título do site no cabeçalho */
-header h1 {
-  font-family: var(--font-titulo);
-  color: var(--cor4);
-  font-size: 2.5em;
-  text-align: center;
-  margin-bottom: 20px; /* Mais espaço abaixo do título */
-}
-
-/* Menu de navegação centralizado */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center; /* Centraliza os itens do menu */
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 10px 20px; /* Mais espaçamento entre os itens do menu */
-}
-
-nav ul li a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
   color: var(--cor3);
-  font-size: 1.1em;
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: var(--cor4);
+.container-texto {
+    position: absolute;
+    bottom: 185px;
+    left: 45px;
+    max-width: 50vw;
+    padding: 20px 30px;
+    font-size: 28px;
+    border-radius: 6px;
+    color: white;
+}
+
+.container-texto h2 {
+  font-size: 2.5em;
+  font-family: var(--font-titulo);
+  font-style: italic;
+  color: var(--cor0);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container-texto p {
+  font-size: 1em;
+  font-family: var(--font-padrao);
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--cor4);
+  color: var(--cor0);
+  font-family: var(--font-titulo);
+  font-style: normal;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 70px;
+  transition: background 0.2s, transform 0.5s;
+}
+
+.cta-btn:hover {
+  background: var(--cor2);
+  font-style: italic;
+  transform: scale(1.02);
+  text-decoration: underline;
+}
+
+.esgotado-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-radius: 18px;
+  padding: 40px 3vw;
+  margin: 40px 0;
+}
+
+.esgotado-texto {
+  margin-top: 100px;
+  flex: 1 1 0;
+  max-width: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.esgotado-section h2 {
+  font-size: 2.3em;
+  font-family: var(--font-padrao);
+  font-style: italic;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.esgotado-section p {
+  font-size: 1.5em;
+  color: #333;
+  font-family: var(--font-padrao);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.esgotado-img {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.esgotado-img img {
+  max-width: 370px;
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
 }
 
 /* ==================== */
@@ -230,120 +292,6 @@ p {
 }
 
 /* ==================== */
-/* Formulário de contato*/
-/* ==================== */
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-form label {
-  margin-top: 15px;
-  font-weight: 600;
-  color: var(--cor4);
-}
-
-form input, form textarea {
-  padding: 12px;
-  margin-top: 10px; /* Aumentei o espaçamento entre os campos */
-  border: 1px solid var(--cor1);
-  border-radius: 6px;
-  margin-bottom: 25px; /* Mais espaçamento entre os campos */
-}
-
-form textarea {
-  height: 150px;
-  resize: none;
-}
-
-form button {
-  margin-top: 20px;
-  padding: 12px 20px;
-  background-color: var(--cor8);
-  color: var(--cor0);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: var(--cor3);
-}
-
-/* ============================= */
-/*       FORMULÁRIO DE LOGIN     */
-/* ============================= */
-#login-section, #cadastro-section {
-  background-color: var(--cor0);
-  border-radius: 12px;
-  padding: 30px 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form div {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-form label {
-  margin-top: 10px;
-  font-family: var(--font-destaque);
-  color: var(--cor1);
-}
-
-form input {
-  padding: 12px;
-  border: 1px solid var(--cor7);
-  border-radius: 6px;
-  font-family: var(--font-destaque);
-  margin-bottom: 15px;
-}
-
-form input:focus {
-  border-color: var(--cor2);
-  outline: none;
-}
-
-form button {
-  padding: 12px 24px;
-  background-color: var(--cor2);
-  color: var(--cor0);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: var(--font-destaque);
-  font-weight: 600;
-  font-size: 1rem;
-}
-form button:hover {
-  background-color: var(--cor2);
-  transform: scale(1.02);
-}
-
-
-/* Link para alternar entre login e cadastro */
-form p a {
-  color: var(--cor8);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-form p a:hover {
-  text-decoration: underline;
-}
-
-/* ==================== */
 /* Footer do site       */
 /* ==================== */
 
@@ -382,4 +330,40 @@ footer .container p {
 
 .instagram-link i {
   margin-right: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 16px 8px 16px;
+    position: static;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .container-texto {
+    position: static;
+    max-width: 90vw;
+    padding: 16px 10px;
+    font-size: 1.1em;
+    margin-top: 24px;
+  }
+
+  .container-texto h2 {
+    font-size: 2em;
+  }
+
+  .imagem-fundo {
+    min-height: 160px;
+    max-height: 300px;
+    border-radius: 0 0 20px 20px;
+  }
 }

@@ -1,3 +1,18 @@
+@media (max-width: 550px){
+
+}
+
+
+@media (min-width: 550px) and (max-width: 1024px){
+  
+}
+
+
+@media (min-width: 1025px){
+
+}
+
+
 /* Responsividade footer */
 @media (max-width: 550px){
   footer {
@@ -85,7 +100,7 @@ hr {
 }
 
 }
-@media (min-width: 550px) and (max-width: 1024px){
+@media (min-width: 550px) and (max-width: 1024px){ 
    footer {
     display: flex;
     position: relative;
@@ -273,7 +288,7 @@ footer hr {
 
 .chat-qr {
   position: absolute;
-  top: 50px;      /* mais abaixo do texto */
+  top: 80px;      /* mais abaixo do texto */
   right: 110px;    /* mesma distância da direita */
   width: 100px; /* exemplo */
   height: auto;

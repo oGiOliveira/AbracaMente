@@ -18,11 +18,11 @@
                     <h1>Criar Conta</h1>
                     <span>Use seu E-mail para se cadastrar</span>
                     {% csrf_token %}
-                    <input type="text" name="username" placeholder="Nome">
-                    <input type="email" name="username" placeholder="Email" required>
-                    <input type="password" name="password1" placeholder="Senha" required>
-                    <input type="password" name="password2" placeholder="Confirme sua senha" required>
-                    <a href="https://drive.google.com/file/d/1JRiw1Ph_wKR46fH159KdVPJ55D4E_RK6/view?usp=sharing">Termos de Serviço</a>
+                    {{ form.username }}
+                    {{ form.email }}
+                    {{ form.password1 }}
+                    {{ form.password2 }}
+                    <a href="https://drive.google.com/file/d/1JRiw1Ph_wKR46fH159KdVPJ55D4E_RK6/view?usp=sharing" target="_blank" rel="noopener">Termos de Serviço</a>
                     <button type="submit">Criar</button>
                 </form>
             </div>
@@ -31,9 +31,9 @@
                     <h1>Entrar</h1>
                     <span>Use seu E-mail e senha para entrar na sua conta</span>
                     {% csrf_token %}
-                    <input type="email" name="username" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <a href="{% url 'password_reset_done' %}">Esqueceu sua senha?</a>
+                    {{ form.email }}
+                    {{ form.password }}
+                    <a href="{% url 'password_reset' %}">Esqueceu sua senha?</a>
                     <button type="submit">Entrar</button>
                 </form>
             </div>

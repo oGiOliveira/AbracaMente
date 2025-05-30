@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings 
 from django.template.loader import get_template  
 from django.core.mail import EmailMessage 
+from django.contrib.auth.forms import UserCreationForm
 
 def sendmail_agendamento(data):
     message_body = get_template('agendamento/enviar.html').render(data)  
@@ -56,3 +57,7 @@ def agendamento_com_sucesso(request):
 @login_required
 def perfil(request):
     return render(request, 'perfil.html')
+
+def connect(request):
+    form = UserCreationForm()
+    return render(request, 'registration/connect.html', {'form': form})

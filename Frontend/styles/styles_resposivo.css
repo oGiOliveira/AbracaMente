@@ -1,5 +1,5 @@
 /* Responsividade footer */
-@media (max-width: 540px){
+@media (max-width: 550px){
   footer {
     display: flex;
     flex-direction: column;
@@ -12,7 +12,8 @@
 }
 
 footer .container p {
-  margin: 0;
+  text-align: center;
+  margin-top: 13px;
   font-size: 14px;
   color: var(--cor0);
 }
@@ -33,7 +34,7 @@ footer .container p {
 }
 
 .titulo-r {
-  position: relative;
+    position: relative;
     text-align: center;
     margin-bottom: 10px;
     top: 20px;
@@ -42,10 +43,8 @@ footer .container p {
 }
 
 .subtitulo-r {
-  position: relative;
+    position: relative;
     text-align: center;
-    left: 20px;
-    top: 10px;
     color: var(--cor0);
 }
 
@@ -68,11 +67,13 @@ hr {
   margin-right: 5px;
 }
 
-.T-chat {
-  position: relative;
+#T-chat {
   text-align: center;
-  text-align: center;
+  margin-top: 13px;
+  font-size: 14px;
+  color: var(--cor0);
 }
+
 .chat-qr {
   background-color: blueviolet;
 }
@@ -84,22 +85,204 @@ hr {
 }
 
 }
-@media (min-width: 541px) and (max-width: 1024px){
-  .titulo-r {
-  position: relative;
+@media (min-width: 550px) and (max-width: 1024px){
+   footer {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0px; /* Aumentei o padding do footer */
+    background-color: var(--cor4);
+    min-height: 30vh;
+}
+
+footer .container p {
   text-align: center;
-  bottom: 80px;
-  font-size: 25px;
-  color: red;
+  margin-top: 13px;
+  font-size: 14px;
+  color: var(--cor0);
+}
+
+.logo-footer {
+    display: block;
+    margin: 3vh 7vh;
+    height: auto;
+}
+
+.nome-logo {
+    font-size: 2rem;
+    padding: 0rem;
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: var(--cor0);
+}
+
+.titulo-r {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    top: 20px;
+    font-size: 25px;
+    color: var(--cor0);
+}
+
+.subtitulo-r {
+    position: relative;
+    text-align: center;
+    color: var(--cor0);
+}
+
+footer hr {
+  width: 85%;  /* ocupa 60% da largura do container */
+  max-width: 800px; 
+  margin: 20px auto;
+  top: 10px;
+}
+
+.inst {
+  display: flex;
+}
+.instagram-link {
+  text-decoration: none;
+  color: var(--cor0);
+  font-weight: bold;
+}
+
+.instagram-link i {
+  margin-right: 5px;
+}
+
+#T-chat {
+  position: absolute; /* ou relative, dependendo do contexto */
+  top: 20px;      /* distância do topo */
+  right: 20px;    /* distância da direita */
+  font-size: 16px;
+  text-align: right;
+  z-index: 10; /* garante que fique visível acima de outros */
+  color: var(--cor0);
+}
+
+.chat-qr {
+  position: absolute;
+  top: 50px;      /* mais abaixo do texto */
+  right: 110px;    /* mesma distância da direita */
+  width: 100px; /* exemplo */
+  height: auto;
+  background-color: white;
+}
+
+.direitos{
+  display: flex;
+  font-size: 14px;
+  color: var(--cor0);
 }
 }
 
-@media (min-width: 1024px){
-  .titulo-r {
-  position: relative;
+@media (min-width: 1025px){
+   footer {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0px; /* Aumentei o padding do footer */
+    background-color: var(--cor4);
+    min-height: 30vh;
+}
+
+footer .container p {
   text-align: center;
-  bottom: 80px;
-  font-size: 25px;
-  color: rgb(255, 0, 212);
+  margin-top: 13px;
+  font-size: 14px;
+  color: var(--cor0);
+}
+
+.logo-footer {
+    display: block;
+    margin: 3vh 7vh;
+    height: auto;
+}
+
+.nome-logo {
+    width: auto;    /* deixa largura natural */
+    max-width: max-content; /* se suportado */
+    font-size: 2rem;
+    padding: 0rem;
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: var(--cor0);
+}
+
+/* Agrupamento fixo no topo */
+.grupo-topo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.titulo-r, .subtitulo-r {
+  text-align: center;
+  color: var(--cor0);
+  margin: 0;
+}
+
+footer hr {
+  width: 50%;
+  max-width: 600px;
+  margin-top: 10px;
+  border: 1px solid var(--cor0);
+}
+
+
+.insta {
+  position: relative;
+  margin-top: -60px;         
+  width: 100%; 
+  display: flex; 
+  justify-content: center;
+}
+.instagram-link {
+  
+  max-width: max-content; /* se suportado */
+  text-decoration: none;
+  color: var(--cor0);
+  font-weight: bold;
+  width: auto; /* garante que não ocupe mais que o necessário */
+  
+}
+
+.instagram-link i {
+  margin-right: 5px;
+  align-items: center;
+}
+
+#T-chat {
+  position: absolute; /* ou relative, dependendo do contexto */
+  top: 20px;      /* distância do topo */
+  right: 20px;    /* distância da direita */
+  font-size: 16px;
+  text-align: right;
+  z-index: 10; /* garante que fique visível acima de outros */
+  color: var(--cor0);
+}
+
+.chat-qr {
+  position: absolute;
+  top: 50px;      /* mais abaixo do texto */
+  right: 110px;    /* mesma distância da direita */
+  width: 100px; /* exemplo */
+  height: auto;
+  background-color: white;
+}
+
+.direitos{
+  display: flex;
+  font-size: 14px;
+  color: var(--cor0);
 }
 }

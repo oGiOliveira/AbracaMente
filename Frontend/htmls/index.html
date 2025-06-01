@@ -31,7 +31,7 @@
             <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
                     
             {% if user.is_authenticated %}
-              <li><a href="{% url 'perfil' %}" class="agendamento-link">Conta</a></li>
+              <li><a href="{% url 'perfil' %}" class="agendamento-link">Perfil</a></li>
             {% else %}
               <li><a href="/connect/" class="agendamento-link">Conectar</a></li>
             {% endif%}

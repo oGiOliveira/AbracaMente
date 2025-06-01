@@ -17,22 +17,52 @@
                 <form method="POST" action="{% url 'connect' %}">
                     <h1>Criar Conta</h1>
                     <span>Use seu E-mail para se cadastrar</span>
-                    {% csrf_token %}
-                    <input type="text" name="username" placeholder="Nome">
-                    <input type="email" name="username" placeholder="Email" required>
-                    <input type="password" name="password1" placeholder="Senha" required>
-                    <input type="password" name="password2" placeholder="Confirme sua senha" required>
-                    <a href="https://drive.google.com/file/d/1JRiw1Ph_wKR46fH159KdVPJ55D4E_RK6/view?usp=sharing" target="_blank" rel="noopener">Termos de Serviço</a>
+                    {% csrf_token %} 
+
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <div class="erro">{{ form.username.errors.0 }}</div>
+                    {% endif %}
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                        <div class="erro">{{ form.email.errors.0 }}</div>
+                    {% endif %}
+                    {{ form.password1 }}
+                    {% if form.password1.errors %}
+                        <div class="erro">{{ form.password1.errors.0 }}</div>
+                    {% endif %}
+                    {{ form.password2 }}
+                    {% if form.password2.errors %}
+                        <div class="erro">{{ form.password2.errors.0 }}</div>
+                    {% endif %}
+                    <div class="termos">
+                        <input type="checkbox" name="TermosServiçoCheckbox" id="TermosServiçoCheckbox" required>
+                        <a href="https://drive.google.com/file/d/1JRiw1Ph_wKR46fH159KdVPJ55D4E_RK6/view?usp=sharing" target="_blank" rel="noopener">Concordo com os Termos de Serviço</a>
+                    </div>
                     <button type="submit">Criar</button>
                 </form>
             </div>
             <div class="form-container sign-in">
-                <form method="POST" action="{% url 'myhome' %}">
+                <form method="POST" action="{% url 'login' %}">
                     <h1>Entrar</h1>
                     <span>Use seu E-mail e senha para entrar na sua conta</span>
                     {% csrf_token %}
-                    <input type="email" name="username" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
+
+                    {% if messages and show_login %}
+                        {% for message in messages %}
+                            <div class="erro">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+
+                    {{ login_form.username }}
+                    {% if login_form.username.errors %}
+                        <div class="erro">{{ login_form.username.errors.0 }}</div>
+                    {% endif %}
+                    {{ login_form.password }}
+                    {% if login_form.password.errors %}
+                        <div class="erro">{{ login_form.password.errors.0 }}</div>
+                    {% endif %}
+
                     <a href="{% url 'password_reset' %}">Esqueceu sua senha?</a>
                     <button type="submit">Entrar</button>
                 </form>
@@ -59,5 +89,18 @@
                 <img src="{% static 'arrowIcon.png' %}" alt="Icone de seta para voltar à página anterior">
             </a>
         </div>
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                const container = document.getElementById('container');
+                {% if show_login %}
+                    container.classList.add('active');
+                {% else %}
+                    container.classList.remove('active');
+                {% endif %}
+            });
+        </script>
+
     </body>
 </html>

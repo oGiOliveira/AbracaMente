@@ -120,15 +120,26 @@ body{
 .termos {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 10px;
     font-size: 10px;
+    width: auto;
+}
+
+.termos a {
+    white-space: nowrap;
+    margin-left: 6px;
 }
 
 .voltar {
   display: flex;
   justify-content: flex-start;
   margin-top: 24px;
+}
+
+.erro {
+    color: rgb(201, 11, 11);
+    font-size: 12px;
 }
 
 @keyframes move{

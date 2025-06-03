@@ -18,11 +18,15 @@
                     <h1>Criar Conta</h1>
                     <span>Use seu E-mail para se cadastrar</span>
                     {% csrf_token %} 
-
-                    {{ form.username }}
-                    {% if form.username.errors %}
-                        <div class="erro">{{ form.username.errors.0 }}</div>
+                    
+                    {% if form.non_field_errors %}
+                        <div class="erro">
+                            {% for error in form.non_field_errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
                     {% endif %}
+
                     {{ form.email }}
                     {% if form.email.errors %}
                         <div class="erro">{{ form.email.errors.0 }}</div>
@@ -48,15 +52,23 @@
                     <span>Use seu E-mail e senha para entrar na sua conta</span>
                     {% csrf_token %}
 
+                    {% if login_form.non_field_errors %}
+                        <div class="erro">
+                            {% for error in login_form.non_field_errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
                     {% if messages and show_login %}
                         {% for message in messages %}
                             <div class="erro">{{ message }}</div>
                         {% endfor %}
                     {% endif %}
 
-                    {{ login_form.username }}
-                    {% if login_form.username.errors %}
-                        <div class="erro">{{ login_form.username.errors.0 }}</div>
+                    {{ login_form.email }}
+                    {% if login_form.email.errors %}
+                        <div class="erro">{{ login_form.email.errors.0 }}</div>
                     {% endif %}
                     {{ login_form.password }}
                     {% if login_form.password.errors %}

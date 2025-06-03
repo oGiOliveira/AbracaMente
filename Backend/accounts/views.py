@@ -16,9 +16,6 @@ def connect(request):
                 login(request, user)
                 messages.success(request, 'Registrado com sucesso!')
                 return redirect('perfil')
-
-            else:
-                messages.error(request, 'Corrija os erros abaixo.')
         else:
             form = ConnectForm()
             login_form = LoginForm()
@@ -30,14 +27,14 @@ def connect(request):
         
 def login_view(request):
     if request.method == "POST":
-        login_form = LoginForm(request, data=request.POST)
+        login_form = LoginForm(request.POST)
         form = ConnectForm()
         if login_form.is_valid():
             user = login_form.get_user()
             login(request, user)
             return redirect('perfil')
         else:
-            messages.error(request, 'Usuário ou senha incorretos.')
+            messages.error(request, 'E-mail ou senha incorretos.')
             show_login = True
     else:
         form = ConnectForm()

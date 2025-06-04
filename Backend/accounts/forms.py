@@ -14,6 +14,20 @@ class ConnectForm(UserCreationForm):
             "password2": forms.PasswordInput(attrs={"placeholder": "Confirme a senha"}),
         }
 
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.username = self.cleaned_data["email"]
+        user.email = self.cleaned_data["email"]
+        if commit:
+            user.save()
+        return user
+    
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(username=email).exists():
+            raise forms.ValidationError("Este e-mail já está em uso.")
+        return email
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['password1'].widget.attrs['placeholder'] = 'Senha'

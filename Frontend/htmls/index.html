@@ -25,9 +25,8 @@
           </div>
           
           <ul>
-            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
             <li><a href="#duvidas">Dúvidas Frequentes</a></li>
-            <li><a href="#contato">Contato</a></li>
             <li><a href="{% url 'tipo_agendamento' %}" class="agendamento-link">Agendamento</a></li>
                     
             {% if user.is_authenticated %}
@@ -42,6 +41,7 @@
         <h2>Foco no autoconhecimento</h2>
         <p>Abraçamente: Autoconhecimento e equilíbrio para sua vida</p>
         <a href="{% url 'tipo_agendamento' %}" class="cta-btn">Agendar Consulta</a>
+        <a href="https://t.me/Pisy_helpbot" class="cta-btn-chatbot" target="_blank" rel="noopener">Conversar com Chatbot</a>
       </div>
       
     </div>
@@ -126,7 +126,7 @@
       <div id="T-chat">
         Converse com nosso Chatbot pelo QR Code:
       </div>
-      <img src="{% static 'ChatBotQR.jpg' %}" alt="QR code para ir ao chat Bot!" class="chat-qr">
+      <img src="{% static 'QRcodeTelegram.png' %}" alt="QR code para ir ao chat Bot!" class="chat-qr">
       <!-- <div class="direitos">
         &copy; 2025 Abraçamente - Todos os direitos reservados.
       </div> -->

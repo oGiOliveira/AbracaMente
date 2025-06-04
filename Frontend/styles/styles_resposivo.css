@@ -119,10 +119,6 @@
   transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  color: var(--cor3);
-}
-
 .container-texto {
     position: absolute;
     bottom: 185px;

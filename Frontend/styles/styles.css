@@ -32,6 +32,10 @@
 /* ========================= */
 /* Estilo global do <body>  */
 /* ========================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Coustard", serif;
   font-weight: 400;
@@ -106,13 +110,16 @@ body {
   font-family: var(--font-padrao);
   font-weight: 600;
   color: var(--cor0);
-  font-size: 1.1em;
+  font-size: 1.8em;
   text-decoration: none;
   transition: color 0.3s ease;
+  padding: 20px 20px 20px 20px;
 }
 
 .navbar ul li a:hover {
-  color: var(--cor3);
+  background: rgba(0, 0, 0, 0.103);
+  outline: 2px solid var(--cor2);
+  border-radius: 6px;
 }
 
 .container-texto {
@@ -141,12 +148,12 @@ body {
   margin-bottom: 30px;
 }
 
-.cta-btn {
+.cta-btn, .cta-btn-chatbot {
   display: inline-block;
   background: var(--cor4);
   color: var(--cor0);
   font-family: var(--font-titulo);
-  font-style: normal;
+  font-style: italic;
   font-weight: bold;
   padding: 12px 24px;
   border-radius: 12px;
@@ -156,11 +163,16 @@ body {
   transition: background 0.2s, transform 0.5s;
 }
 
-.cta-btn:hover {
+.cta-btn:hover, .cta-btn-chatbot:hover {
   background: var(--cor2);
-  font-style: italic;
-  transform: scale(1.02);
+  font-style: normal;
+  transform: scale(0.96);
   text-decoration: underline;
+}
+
+.cta-btn-chatbot {
+  background: rgba(0, 0, 0, 0.404);
+  outline: 2px solid var(--cor0);
 }
 
 .esgotado-section {
@@ -266,7 +278,7 @@ h2 {
 p {
   text-align: justify;
   text-indent: 30px;
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 160px; /* Aumentei o espaçamento entre os parágrafos */
 }
 
@@ -288,6 +300,7 @@ p {
   font-weight: bold;
   color: var(--cor1);
   margin-bottom: 15px; /* Mais espaçamento entre o botão e a resposta */
+  font-size: 20px;
 }
 
 /* Resposta da FAQ escondida por padrão */
@@ -355,7 +368,7 @@ hr {
 }
 
 .instagram-link {
-  color: rgb(245, 52, 235);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
 }
@@ -364,8 +377,12 @@ hr {
   margin-right: 0px;
 }
 
+.instagram-link:hover {
+  text-decoration: underline;
+}
+
 .chat-qr {
-  background-color: purple;
+  background-color: rgb(10, 10, 10);
 }
 
 .T-chat {
@@ -520,38 +537,7 @@ footer p, footer a {
   }
 }
 
-/* Estilo geral do header */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Banner de fundo com texto central */
+/* Banner de fundo com texto central*/
 .imagem-fundo {
   background-image: url("{% static 'FundoPrincipal.png' %}");
   background-size: cover;

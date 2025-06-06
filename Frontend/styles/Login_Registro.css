@@ -233,3 +233,7 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+h1 {
+    font-size: 1.1em;
+}

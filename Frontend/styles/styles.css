@@ -198,7 +198,6 @@ body {
   height: 100%;
 }
 
-
 .esgotado-section h2 {
   font-size: 2.3em;
   font-family: var(--font-padrao);
@@ -270,7 +269,7 @@ section {
 h2 {
   color: black;
   font-family: 'itc';
-  font-size: 30px;
+  font-size: 34px;
   margin-bottom: 20px; /* Mais espaço abaixo dos títulos */
 }
 

@@ -1,1 +1,1 @@
-# ProjetoPM
+# Protótipo de um site com a funcionalidade de agendamento onde as informações do mesmo são enviadas para o e-mail dos psicologos e também há a possibilidade de criação de conta e login que serão mais exploradas em atualizações futuras.
